@@ -1,0 +1,4 @@
+# This file lists authors
+
+Victor Gaultney
+Nicolas Spalinger

@@ -1,0 +1,90 @@
+{% include html-start.html %}
+
+  {% include header-masthead.html %}
+
+    {% assign pageList = site.pages | sort: 'weight' %}
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>{{page.outlevel}} {{ page.title }}</h1>
+          {{ content }}
+          <nav id="post-nav" class="clearfix">
+            {% for p in pageList reversed %}
+
+              {% if p.path contains 'en-US' %}
+
+                {% if currentPost and p.title != {{site.title}} %}
+                  <a class="prev" href="{{site.baseurl}}{{p.url}}">
+                    <span>Prev</span>
+                    <span><h3>{{p.title}}</h3></span>
+                  </a>
+                  {% assign currentPost = false %}
+                  {% break %}
+                {% endif %}
+
+                {% if p.url == page.url %}
+                  {% assign currentPost = true %}
+                {% else %}
+                  {% assign currentPost = false %}
+                {% endif %}
+
+              {% endif %}
+
+            {% endfor %}
+
+            {% assign currentPost = false %}
+
+            {% for p in pageList %}
+
+              {% if p.path contains 'en-US' %}
+
+                {% if currentPost and p.title != {{site.title} %}
+                  <a class="next" href="{{site.baseurl}}{{p.url}}">
+                    <span>Next</span>
+                    <span><h3>{{p.title}}</h3></span>
+                  </a>
+                  {% assign currentPost = false %}
+                  {% break %}
+                {% endif %}
+
+                {% if p.url == page.url %}
+                  {% assign currentPost = true %}
+                {% else %}
+                  {% assign currentPost = false %}
+                {% endif %}
+
+              {% endif %}
+
+            {% endfor %}
+          </nav>
+        </section>
+
+        <aside id="sidebar">
+          <ol class="rectangle-list">
+            {% for p in pageList %}
+              {% if p.path contains 'en-US' and p.title != {{site.title}} %}
+                <li>
+                  <span class="outlevel">
+                    {{ p.outlevel }}
+                  </span>
+                  <a {% if p.url == page.url %}class="active"{% endif %} href="{{site.baseurl}}{{p.url}}">
+                    {% capture testtitle %}{{ p.shorttitle }}{% endcapture %}
+                    {% if testtitle != "" %}
+                      {{ p.shorttitle }}
+                    {% else %}
+                      {{ p.title }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ol>
+          <p><a class="" href="https:{{site.repourl}}/commits/gh-pages">Review recent changes</a></p>
+        </aside>
+      </div>
+    </div>
+
+{% include footer.html %}
+
+{% include html-end.html %}
