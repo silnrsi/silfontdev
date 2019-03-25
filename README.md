@@ -4,7 +4,7 @@ How to build, modify, and contribute to SIL International font projects. It is a
 - [Andika Mtihani](https://github.com/silnrsi/font-andika-mtihani)
 - (add more)
 
-This site is specifically for SIL font projects, however the content is equally applicable to any other projects that use the font workflow described here. 
+This site is specifically for SIL font projects, however the content is equally applicable to any other projects that use the open font workflow described here. 
 
 ## General Info
 - The anticipated content of the book can be found in the https://github.com/silnrsi/silfontdev/en-US-weightlist.md document.
@@ -16,6 +16,8 @@ This site is specifically for SIL font projects, however the content is equally 
 
 ## Acknowledgements
 We gratefully acknowledge this site is modeled on [Design With FontForge] on [GitHub].
+
+We also gratefully acknowledge all the hard work that has gone into the various software tools we will be using throughout the workflow. Thanks to all the developers and maintainers!
 
 [Design With FontForge]: http://designwithfontforge.com
 [GitHub]: https://github.com/fontforge/designwithfontforge.com
