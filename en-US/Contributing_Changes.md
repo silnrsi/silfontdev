@@ -11,7 +11,7 @@ Making changes is one thing, contributing changes so that they can become part o
 
 To maximize the chances of changes making it into an original version we need to consider the following: 
 
-- making sure changes are expressed in open formats for interoperability: like UFOs and other non-opaque open standards. 
+- making sure changes are expressed in open formats for interoperability: like UFOs and other non-opaque open standards
 - preparing changes so they are correctly isolated from other changes (a minimal working example) and can easily be tested
 - opening a Github issue to describe the proposed change 
 - making a diff or a branch available publicly containing the changes, then submitting a PR (Pull Request) or MR (Merge Request)

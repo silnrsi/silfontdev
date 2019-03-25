@@ -26,7 +26,7 @@ After having made any desired changes, we save this .glyphs file, then we can ru
 
 > ./preflightg
 
-This will propagate the changes back into the UFOs, normalize the UFOs, and sync/propagates metadata. This is why it's called preflight, typically being run this before more manual testing locally and before committing and pushing a public change (the final g stands for Glyphs). We can set the preflightg script to _check mode_ to flag well-known errors, we can also set it to _fix mode_ where it will apply fixes to well-known errors. 
+This will propagate the changes back into the UFOs, normalize the UFOs, and sync/propagates metadata. This is why it's called preflight, typically being run before more manual testing locally and before committing and pushing a public change (the final g stands for Glyphs). We can set the preflightg script to _check mode_ to flag well-known errors, we can also set it to _fix mode_ where it will apply fixes to well-known errors. 
 
 If we don't have Glyphs available we can still run a similar script: 
 > ./preflight 
@@ -50,7 +50,7 @@ Then we can then go back to building the font to see our changes and to test the
 
 ### Development name and font derivative renaming ### 
 
-Please remember that we probably need to pick a name for q derivative so as not to collide with the existing namespace of the font we are deriving from. This name cannot be a reserved font name that is already declared in the font that we're modifying, in the case of Andika-Mtihani we can't use Andika or SIL. But we can pick something creative. We can just choose a development name that is not the name that we intend to have end-users recognize and see in their font menu.
+Please remember that we probably need to pick a name for our derivative so as not to collide with the existing namespace of the font we are deriving from. This name cannot be a reserved font name that is already declared in the font that we're modifying, in the case of Andika-Mtihani we can't use Andika or SIL. But we can pick something creative. We can just choose a development name that is not the name that we intend to have end-users recognize and see in their font menu.
 
 
 

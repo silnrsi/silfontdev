@@ -41,7 +41,7 @@ Download the current Vagrant profile from the smith github repository. The profi
 -  [Vagrantfile](https://github.com/silnrsi/smith/raw/master/vm-install/Vagrantfile)
 -  [provision.sh](https://github.com/silnrsi/smith/raw/master/vm-install/provision.sh)
 
-Download these two files and put them into the same parent folder of the font project folder: __Documents/work/fonts/__. (We do it this way so we can use the same VM for multiple font projects). 
+Download these two files and put them into the same parent folder of the font project folder: __Documents/work/fonts/__. (We do it this way so we can use the same VM for multiple font projects in subfolders). 
 
 Then check out the out Andika Mtihani git repository by typing:
 
@@ -49,7 +49,7 @@ Then check out the out Andika Mtihani git repository by typing:
 >
 > git clone https://github.com/silnrsi/font-andika-mtihani 
 
-This will checkout a local working copy of the git repository in __~/Documents/work/fonts/font-andika-mtihani/__. (We can use a GUI client for git to do if needed).
+This will checkout a local working copy of the git repository in __~/Documents/work/fonts/font-andika-mtihani/__. (We can also use a GUI client for git to do that if needed).
 
 #### Spinning up the profile and testing that it runs ####
 
@@ -62,19 +62,18 @@ Now is probably at good time to go grab a cup of tea or coffee...
 
 Vagrant has a few subcommand which are pretty self-explanatory and useful to remember:
 - __vagrant up__ spins up the profile by reading the configuration in Vagrantfile, then provisions the VM by running the provision.sh script
-- __vagrant provision__ can be typed separately once the VM is running to have it re-run the installation steps and to get updates for example. 
+- __vagrant provision__ can be typed separately once the VM is running to have it go through the installation steps and to get updates for example. 
 - __vagrant ssh__ allows us to log into the VM so that we can run the various commands (see next section). 
 - __vagrant halt__ stops the VM
 - __vagrant destroy__ deletes the VM but not any of the work files shared on the host computer 
 
-The vagrant profile will automatically set up shared folders, so the VM will see the files under the __Documents/work/fonts/__ folder on the host computer. We can adjust this in the Vagrantfile to our liking (and then type __vagrant reload__) but by default it shares the folder where it was launched it, in our case __Documents/work/fonts/__ on the host computer with __/smith/__ inside the VM. 
+The vagrant profile will automatically set up shared folders, so the VM will see the files under the __Documents/work/fonts/__ folder on the host computer. We can adjust this in the Vagrantfile to our liking (and then type __vagrant reload__) but by default it shares the folder where it was launched from, in our case __Documents/work/fonts/__ on the host computer with __/smith/__ inside the VM. 
 
-(Vagrant stores certain files in a __.vagrant/__ subfolder on the host computer. _Remember that if we rename or move that subfolder or the whole parent folder in the course of work on the project, vagrant won't be able to find the path to the VM again and we may have to spin up a new VM._
-The actual Virtual Machine configuration and disk images are stored in __~/.Virtualbox/__.)
+(Vagrant stores certain files in a __.vagrant/__ subfolder on the host computer. _Remember that if we rename or move that subfolder or the whole parent folder in the course of working on the project, vagrant won't be able to find the path to the VM again and we may have to spin up a new VM._ The actual Virtual Machine configuration and disk images are stored in __~/.Virtualbox/__.)
 
 Watch the command-line output as it automatically downloads, sets up the base VM (also called a box in Vagrant jargon) then runs the provision.sh script which contains instructions on what to install and from where. We can open the provision.sh script in our preferred text editor to see what it does. 
 
-Once the whole vagrant up process has finished (and "smith is now ready to use"), we can type __vagrant ssh__ to log into the VM. 
+Once the whole vagrant up process has finished (and we see the message "smith is now ready to use"), we can type __vagrant ssh__ to log into the VM. 
 
 ### Keeping the VM updated ###
 

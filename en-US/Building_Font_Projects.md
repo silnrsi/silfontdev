@@ -23,7 +23,7 @@ To change directories to get to our project folder, simply type:
 
 > cd /smith
 
-> cd font-andika-mtihani/ 
+> cd font-andika-mtihani 
 
 to make sure no build artifacts or temporary files are left from previous builds, type:
 
@@ -41,7 +41,7 @@ to run the whole test suite, type:
 
 > smith alltests
 
-to provide development versions of the current work ("zip" is the Windows-targeted artifact with Windows line-endings and "tar.xz" is the macOS/Linux-based artifacts with Unix line-endings, the current git hash and a -dev suffix will be added to the name of the artifacts to help distinguish ongoing work vs. released font), type: 
+to provide development versions of the current work ("zip" is the Windows-targeted artifact with Windows line-endings and "tar.xz" is the macOS/Linux-based artifact with Unix line-endings, the current git hash and a -dev suffix will be added to the name of the artifacts to help distinguish ongoing work vs. released font), type: 
 
 > smith zip 
 
@@ -53,7 +53,7 @@ to provide release versions of the current work (both in zip and "tar.xz" format
 
 ### finding the generated files ###
 
-We will see the results of the  various smith subcommands (or targets) in the form of generated files and log files places in the __results/__ folder. We can simply browse through these files on the host computer. 
+We will see the results of the  various smith subcommands (or targets) in the form of generated files and log files in the __results/__ folder. We can simply browse through these files on the host computer. 
 
 ### Video preview of the steps ###
 
