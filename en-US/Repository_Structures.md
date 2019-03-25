@@ -59,7 +59,7 @@ If we take [Andika Mtihani](https://github.com/silnrsi/font-andika-mtihani)'s pu
 >├──    └──  AndikaMtihaniItalic.designspace  (the designspace definition for Italic)
 >
 >├──    └──  AndikaMtihaniRoman.designspace (the designspace definition for Roman)
-
+>
 >├──    └── glyph_data.csv  (the file indicating the desired glyph ordering, used by prefligt) 
 >
 >├──    └──  ...
