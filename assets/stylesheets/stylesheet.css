@@ -344,6 +344,12 @@ form {
 
 }
 
+div.changes {
+  text-align: right;
+  font-size: .95em;
+  margin-top: 3em;
+}
+
 em, i {
   font-style: italic;
 }
