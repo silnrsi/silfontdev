@@ -57,7 +57,7 @@ We will see the results of the  various smith subcommands (or targets) in the fo
 
 ### Video preview of the steps ###
 
-Watch it full-screen for more legibility. 
+Watch it full screen for more legibility. 
 
 <video src="../assets/videos/building-font-projects-steps.webm" width="90%" height="90%" controls preload></video>
 

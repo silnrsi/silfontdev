@@ -82,7 +82,7 @@ Over the course of working with the VM, there will be updates to various compone
 >
 > sudo apt-get upgrade -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-overwrite" -u -V --with-new-pkgs
 
-or by what telling Vagrant to reprovision (re-run the provision.sh script) by typing in the terminal on the host computer:
+or by telling Vagrant to reprovision (re-run the provision.sh script) by typing in the terminal on the host computer:
 > vagrant provision
 
 
@@ -90,7 +90,7 @@ or by what telling Vagrant to reprovision (re-run the provision.sh script) by ty
 
 (The video skips some of the longer parts of the installation process).
 
-Watch it fullscreen for more legibility. 
+Watch it full screen for more legibility. 
 
 <video src="../assets/videos/setting-up-tools.webm" width="90%" height="90%" controls preload></video>
 
