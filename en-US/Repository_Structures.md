@@ -11,7 +11,7 @@ To make it easier to know where various source files are located, or can be foun
 
 We talk about repositories because we assume that a local folder structure and all the files it contains will be tracked with [git](https://git-scm.com/).
 
-We recommend that you have a project folder that contains all the font sources, so that it's self-contained. (Using git submodules for some scenarios where you are sharing common data and sources across fonts might work but it does add an extra layer of complexity that not everybody wants to deal with). 
+We recommend using a dedicated project folder that contains all the font sources, so that it's self-contained. (Using git submodules for some scenarios where you are sharing common data and sources across fonts might work but it does add an extra layer of complexity that not everybody wants to deal with). 
 
 A good convention is __font-nameoffontfamily/__ for the name of that project folder. 
 
@@ -54,6 +54,10 @@ If we take [Andika Mtihani](https://github.com/silnrsi/font-andika-mtihani)'s pu
 >
 >├──    └── AndikaMtihani-Regular.ufo
 >
+>├──           └──── features.fea  (the features file containing the OpenType source code) 
+>
+>├──           └──── ...
+>
 >├──    └── composites.txt  (the definition for the composite characters)
 >
 >├──    └──  AndikaMtihaniItalic.designspace  (the designspace definition for Italic)
@@ -88,13 +92,15 @@ If we take [Andika Mtihani](https://github.com/silnrsi/font-andika-mtihani)'s pu
 >
 >├── wscript (the smith configuration used for building, testing and releasing)
 >
-
+>├── .gitattributes (the git attributes configuration hidden file tailored to font projects)
+>
+>├── .gitignore (the git ignore configuration hidden file tailored to font projects)
 
 
 
 ### Ignored files: temporary files, generated files ###
 
-By default the generated results of builds will appear in a separate folder, the __results/__ folder. By default, temporary files and generated artifacts like fonts, test results, specimens, etc are not stored in the repository and should be set to be ignored by git via a __.gitignore__ configuration file. There is some flexibility though, as certain source files are generated or modified by scripts at various times in the lifecycle of a project. 
+By default the generated results of builds will appear in a separate folder, the __results/__ folder. By default, temporary files and generated artifacts like fonts, test results, specimens, etc. are not stored in the repository and should be set to be ignored by git via a __.gitignore__ configuration file. There is some flexibility though, as certain source files are generated or modified by scripts at various times in the lifecycle of a project. 
 
 
 
