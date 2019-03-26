@@ -14,12 +14,12 @@ We require that font sources are kept in the [UFO3 format](http://unifiedfontobj
 
 We use normalization tools (from the [pysilfont](https://github.com/silnrsi/pysilfont) collection of font utilities) to make sure that the font sources remain clean and vendor-neutral and, while there are useful provisions to hold tool-specific data in the UFO3 spec, we want to prevent one particular tool making the font sources harder to use overall or parts of the sources inaccessible to other tools who do conform to the specification. 
 
-Example source format include the following: 
-- Opentype source code is stored in the .fea (or .feax the fea extended format).
-- Graphite source code is stored in .gdl format. 
-- Documentation is stored in OpenDocument .odt format. 
-- Test data is stored in .ftml format  (and the corresponding .xsl to generate corresponding output) 
-- Test documents are stored in .tex XeTeX format, in .sil SILE format, in .idml IDML format, or in plain text.
-- Data available as csv. 
+Example source format include: 
+- Opentype source code is stored in [.fea features format](https://adobe-type-tools.github.io/afdko/OpenTypeFeatureFileSpecification.html) (or [.feax format](https://github.com/silnrsi/pysilfont/blob/master/docs/feaextensions.md)).
+- Graphite source code is stored in [.gdl (Graphite Description Language) format](https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_techAbout). 
+- Documentation is stored in .odt (OpenDocument Text) format. 
+- Test data is stored in [.ftml (Font Test Markup Language) format](https://github.com/silnrsi/ftml)  (with the corresponding .xsl to generate corresponding output) 
+- Test documents are stored in .tex XeTeX format, in [.sil SILE format](http://sile-typesetter.org/), in .idml (InDesign Markup Language) format, or in plain text.
+- Data available as csv (Comma-separated Values). 
 - The rest are human-readable text files. 
 - ...
