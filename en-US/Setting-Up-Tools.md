@@ -60,7 +60,7 @@ Open this parent folder __Documents/work/fonts/__ in the terminal and type:
 This will start spinning up the whole toolchain. 
 Now is probably at good time to go grab a cup of tea or coffee...
 
-Vagrant has a few subcommand which are pretty self-explanatory and useful to remember:
+Vagrant has a few subcommands which are pretty self-explanatory and useful to remember:
 - __vagrant up__ spins up the profile by reading the configuration in Vagrantfile, then provisions the VM by running the provision.sh script
 - __vagrant provision__ can be typed separately once the VM is running to have it go through the installation steps and to get updates for example. 
 - __vagrant ssh__ allows us to log into the VM so that we can run the various commands (see next section). 
@@ -82,7 +82,7 @@ Over the course of working with the VM, there will be updates to various compone
 >
 > sudo apt-get upgrade -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-overwrite" -u -V --with-new-pkgs
 
-or by telling Vagrant to reprovision (re-run the provision.sh script) by typing in the terminal on the host computer:
+or by telling Vagrant to reprovision (re-run the provision.sh script which also has the two commands above) by typing in the terminal on the host computer:
 > vagrant provision
 
 

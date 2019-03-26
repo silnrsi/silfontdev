@@ -7,7 +7,7 @@ category: Contributing Changes
 title: Contributing Changes
 ---
 
-Making changes is one thing, contributing changes so that they can become part of the original project and not just another fork is another. We want to keep the process of accepting changes low friction but we will probably be reviewing the changes thoroughly.
+Making changes is one thing, contributing changes so that they can become part of the original project and not just another fork is something else. We want to keep the process of accepting changes low friction but we will probably be reviewing the changes thoroughly.
 
 To maximize the chances of changes making it into an original version we need to consider the following: 
 
@@ -22,7 +22,7 @@ this means updating the copyright statement to add an extra entry but without re
 (more details on this later). 
 
 
-We hope you will enjoy building and contributing to our open fonts and that they will fill a need. 
+We hope you will enjoy building and contributing to our open fonts and that they will fill a need for you. 
 
 Let us know if you have any comments or suggestions to add to this guide. 
 
