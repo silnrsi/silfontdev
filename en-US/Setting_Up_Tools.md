@@ -40,8 +40,8 @@ We recommend that you set up a dedicated font projects folder (such as *Document
 
 Our particular Vagrant VM configuration is defined by two files available from our Smith project github repository. Download these two files and put them into your font projects folder (*Documents/work/fonts/*). The easiest way to do that is to right click on the following links, and choose "Save Link As..." or "Download Linked File As...":
 
--  [Vagrantfile] (be sure to save the file as "Vagrantfile" not "Vagrantfile.txt")
--  [provision.sh]
+- [Vagrantfile] (be sure to save the file as "Vagrantfile" not "Vagrantfile.txt")
+- [provision.sh]
 
 ## Step 4: Run Vagrant
 
@@ -58,7 +58,7 @@ To run Vagrant use the terminal to navigate to your font projects folder (*/Docu
 
 *Note that this first-time run will take a while - typically 20 minutes or more - while it "provisions" (configures) the VM. Time to grab a cup of tea or coffee...*
 
-While it's installing everything you'll notice hundreds of lines of commands and messages. There may even be warnings among the messages. As long as the final message isn't a brignt red warning, and you see the message "smith is now ready to use" you're probably fine.
+While it's installing everything you'll notice hundreds of lines of commands and messages. There may even be warnings among the messages. As long as the final message isn't a bright red warning, and you see the message "smith is now ready to use" you're probably fine.
 
 After the provisioning is complete, briefly test the VM by connecting with it through ssh:
 
@@ -108,9 +108,11 @@ If you want to configure a new VM, or get the latest set of tools (for example, 
 
 ## Technical notes on Vagrant
 
+*These are only for those that want to customize or tweak their setup and can safely be ignored by others!*
+
 The vagrant profile will automatically set up shared folders, so the VM will see the files inside the folder from which you've run Vagrant (typically your font projects folder - *Documents/work/fonts/*. You can adjust this by editing the Vagrantfile to your liking.
 
-Vagrant stores certain files in a __.vagrant/__ subfolder on the host computer. _Remember that if we rename or move that subfolder or the whole parent folder in the course of working on the project, vagrant won't be able to find the path to the VM again and we may have to spin up a new VM._ The actual Virtual Machine configuration and disk images are stored in __~/.Virtualbox/__.
+Vagrant stores certain files in a *.vagrant/* subfolder on the host computer. _Remember that if we rename or move that subfolder or the whole parent folder in the course of working on the project, vagrant won't be able to find the path to the VM again and we may have to spin up a new VM._ The actual Virtual Machine configuration and disk images are stored in *~/.Virtualbox/*.
 
 Watch the command-line output as it automatically downloads, sets up the base VM (also called a box in Vagrant jargon) then runs the provision.sh script which contains instructions on what to install and from where. You can open the provision.sh script in your preferred text editor to see what it does. 
 
