@@ -14,7 +14,7 @@ Here is a walkthrough of how to download one of SIL's font projects and build it
 
 ## Check out a font project repository
 
-On your local machine (not in the VM) navigate to your font projects folder (typically *Documents/work/fonts*) and check out the font repository, as in this example using[Andika Mtihani]:
+On your local machine (not in the VM) navigate to your font projects folder (typically *Documents/work/fonts*) and check out the font repository, as in this example using [Andika Mtihani]:
 
 > `git clone https://github.com/silnrsi/font-andika-mtihani`
 
@@ -72,7 +72,7 @@ To produce release versions of the current work without the git hash and -dev su
 
 ## Video walkthrough
 
-Watch this  full screen for more legibility. 
+Watch this full screen for more legibility. 
 
 <video src="../assets/videos/building-font-projects-steps.webm" width="90%" height="90%" controls preload></video>
 
@@ -86,6 +86,6 @@ By making these processes repeatable, including for a number of fonts at the sam
 
 The toolchain components (Smith itself and all the various components) are all open and do not place any undue restricted licensing requirements on the user or developer. You can run it on any system via a VM, and you can run it on a Continuous Integration (CI) server as well. You are welcome to copy the whole VM to other computers or share it with colleagues and friends without restrictions. 
 
-[Setting Up Tools]: Setting_Up_Tools.md
+[Setting Up Tools]: Setting_Up_Tools.html
 [Smith]: https://github.com/silnrsi/smith
 [Andika Mtihani]: https://github.com/silnrsi/font-andika-mtihani
