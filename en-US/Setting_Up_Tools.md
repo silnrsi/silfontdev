@@ -7,8 +7,8 @@ category: Setting Up Tools
 title: Setting Up Tools
 ---
 
-Our projects use a consistent set of free tools for building and modifying fonts. To build our fonts you will need to use the same toolchain and workflow we use.
-To allow for easier installation, use, and management of the various software tools which form part of the toolchain, we use a Virtual Machine (VM). This VM is currently based on [Ubuntu] 16.04 LTS (Xenial). *There is ongoing work happening on a newer version based on Ubuntu 18.04 LTS (Bionic) and python3 but it's not fully ready yet. Stay tuned. It is also possible to separately install required packages directly on a linux-based OS, but that is not covered in this guide.*
+Our projects use a consistent set of libre/open tools for building and modifying fonts. To build our fonts you will need to use the same toolchain and workflow we use.
+To allow for easier installation, use, and management of the various software tools which form part of the toolchain, we use a Virtual Machine (VM). This VM is currently based on [Ubuntu] 16.04 LTS (Xenial). *There is ongoing work happening on a newer version based on Ubuntu 18.04 LTS (Bionic) and python3 but it's not fully ready yet. Stay tuned. (It is also possible to separately install required packages directly on an Ubuntu VM with a graphical interface, but that is not covered in this guide.)*
 
 The process of setting up the toolchain involves:
 
@@ -21,7 +21,7 @@ Please bear in mind that __the toolchain is fairly large (over 500 software comp
 
 ## Step 1: Install Virtualbox and Vagrant
 
-Virtualbox enables us to spin up a new, separate, linux-based environment in a guest VM without any risk to the host computer or the files we are working on. To install Virtualbox:
+Virtualbox enables us to spin up a new, separate, Ubuntu-based environment in a guest VM without any risk to the host computer or the files we are working on. To install Virtualbox:
 
 - Download the [Virtualbox installer] for the preferred host OS. __Please stay with version series 5.2 for now__.
 - Run the installer. You may also need to reboot.
@@ -112,7 +112,7 @@ If you want to configure a new VM, or get the latest set of tools (for example, 
 
 The vagrant profile will automatically set up shared folders, so the VM will see the files inside the folder from which you've run Vagrant (typically your font projects folder - *Documents/work/fonts/*. You can adjust this by editing the Vagrantfile to your liking.
 
-Vagrant stores certain files in a *.vagrant/* subfolder on the host computer. _Remember that if we rename or move that subfolder or the whole parent folder in the course of working on the project, vagrant won't be able to find the path to the VM again and we may have to spin up a new VM._ The actual Virtual Machine configuration and disk images are stored in *~/.Virtualbox/*.
+Vagrant stores certain files in a *.vagrant/* subfolder on the host computer. _Remember that if you rename or move that subfolder or the whole parent folder in the course of working on the project, Vagrant won't be able to find the path to the VM again and you may have to spin up a new one._ The actual Virtual Machine configuration and disk images are stored in *~/.Virtualbox/*.
 
 Watch the command-line output as it automatically downloads, sets up the base VM (also called a box in Vagrant jargon) then runs the provision.sh script which contains instructions on what to install and from where. You can open the provision.sh script in your preferred text editor to see what it does. 
 
@@ -127,4 +127,4 @@ It is also possible to update the VM components separate from running `vagrant p
 [64-bit Vagrant installer]:  https://www.vagrantup.com/downloads.html
 [Vagrantfile]: https://github.com/silnrsi/smith/raw/master/vm-install/Vagrantfile
 [provision.sh]: https://github.com/silnrsi/smith/raw/master/vm-install/provision.sh
-[Building Font Projects]: Building_Font_Projects.md
+[Building Font Projects]: Building_Font_Projects.html
