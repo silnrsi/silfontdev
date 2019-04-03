@@ -1,7 +1,7 @@
 ---
 published: true
 layout: bookpage
-weight: 500
+weight: 600
 outlevel: 6
 category: Building Font Projects
 title: Building Font Projects

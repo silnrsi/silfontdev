@@ -1,7 +1,7 @@
 ---
 published: true
 layout: bookpage
-weight: 600
+weight: 700
 outlevel: 7
 category: Modifying Font Sources
 title: Modifying Font Sources

@@ -10,7 +10,7 @@ Please indicate anticipated future additions by preceeding the page name with --
 | 200    |2      | Source Formats                             |
 | 300    |3      | Repository Structures                      |
 | 400    |4      | Workflow Overview                          |
-| 500    |5      | Setting up Tools                           |
+| 500    |5      | Setting Up Tools                           |
 | 600    |6      | Building Font Projects                     |
 | 700    |7      | Modifying Font Sources                     |
 | 800    |8      | Contributing Changes                       |

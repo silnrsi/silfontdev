@@ -1,7 +1,7 @@
 ---
 published: true
 layout: bookpage
-weight: 700
+weight: 800
 outlevel: 8
 category: Contributing Changes
 title: Contributing Changes

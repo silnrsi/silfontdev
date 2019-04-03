@@ -1,7 +1,7 @@
 ---
 published: true
 layout: bookpage
-weight: 400
+weight: 500
 outlevel: 5
 category: Setting Up Tools
 title: Setting Up Tools
