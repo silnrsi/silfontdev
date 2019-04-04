@@ -7,19 +7,45 @@ category: Source Formats
 title: Source Formats
 ---
 
-We want to keep our font sources in open formats so we (or anyone else) can have our pick of the right tool for the right job.
-Interoperability is a core value of the open font design and production workflow. Being locked-in a particular tool is definitely not we we want. 
+We keep our font sources in open formats so anyone can have full access to them now and in the long-term future. This also gives us the widest-possible choice of tools, so we can pick the right tool for the right job. Interoperability is a core value of our open font design and production workflow. Being locked into a particular proprietary tool is definitely not what we want, especially long-term.
 
-We require that font sources are kept in the [UFO3 format](http://unifiedfontobject.org/versions/ufo3/), it's a documented non-opaque XML platform-neutral open format which does not keep font sources tied up to a particular piece of software (as good as it might be) but allows everyone to use them across a range of tools. Using this format helps future-proof a font project and makes it accessible and maintainable by others. It also helps with keeping font sources in revision control. We might sometimes store other formats in the repository as archival material but we do the actual work with the UFOs as the canonical source. Many foundries are also now using UFOs as their primary source format. 
+## UFO3 + designspace
 
-We use normalization tools (from the [pysilfont](https://github.com/silnrsi/pysilfont) collection of font utilities) to make sure that the font sources remain clean and vendor-neutral and, while there are useful provisions to hold tool-specific data in the UFO3 spec, we want to prevent one particular tool making the font sources harder to use overall or parts of the sources inaccessible to other tools who do conform to the specification. 
+Our primary font sources are kept in the [UFO3 format]. It's a clearly documented, platform-neutral open format which allows everyone to access the sources with range of tools. Using this format helps future-proof a font project and makes it accessible and maintainable by others. It also helps with keeping font sources in revision control - a key to any collaborative development. Many foundries are also now using UFO as their primary source format. It is directly supported by all the main font design tools (Glyphs, Robofont, FontLab, Fontfoge, TruFont). *We sometimes store other formats in the repository for archival purposes (typically in source/archive/) but the fonts are produced from the canonical UFO sources.*
 
-Example source format include: 
-- Opentype source code is stored in [.fea features format](https://adobe-type-tools.github.io/afdko/OpenTypeFeatureFileSpecification.html) (or [.feax format](https://github.com/silnrsi/pysilfont/blob/master/docs/feaextensions.md)).
-- Graphite source code is stored in [.gdl (Graphite Description Language) format](https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_techAbout). 
-- Documentation is stored in .odt (OpenDocument Text) format. 
-- Test data is stored in [.ftml (Font Test Markup Language) format](https://github.com/silnrsi/ftml)  (with the corresponding .xsl to generate corresponding output) 
-- Test documents are stored in .tex XeTeX format, in [.sil SILE format](http://sile-typesetter.org/), in .idml (InDesign Markup Language) format, or in plain text.
-- Data available as csv (Comma-separated Values). 
-- The rest are human-readable text files. 
-- ...
+We also occasionally store some font-wide data in the UFO3 lib.plist
+
+Our font family structures (styles, masters, instances) are defined in [designspace] files that define the relationships between individual font UFOs.
+
+We use normalization tools from the [pysilfont] collection of font utilities to keep the UFOs in a consistent format even after import/export from various other tools and to synchronize them with one another. These keep the font sources clean, vendor-neutral, and friendly to version control systems.
+
+## Additional font sources (and tools)
+
+There are some types of data that currently have no canonical place in the UFO3 format. We store and maintain these in additional files:
+
+- *Graphite source code* is stored in [GDL (Graphite Description Language)] format in *source/graphite/*.
+- *Documentation* is typically stored in .md (Markdown) or .odt (OpenDocument Text) format in *documentation/*.
+- *Test data and documents* are stored in a variety of formats ([FTML], [SILE], TeX, IDML, text) in *tests/*.
+- *Web font demonstration files* (.html, .css) are stored in *web/*.
+- *Tools*, such as project-specific python scripts, are stored in *tools/*.
+
+## Auxilary data sources
+
+There are also some types of data that __do__ have a place in the UFO3 format but are clumsy or awkward to maintain there. We store and edit these in auxiliary files, and use python scripts (usually in *preflight*) to update the UFOs from them before commiting changes to the project repositories:
+
+- *OpenType source code* is stored in the [.fea format] in the UFO (*features.fea)* but may be defined in a separate file using the more efficient and powerful [.feax format]. The .feax is compiled into standard .fea during the build process and may in some cases also be used to update the *features.fea* in the UFOs.
+- *Individual glyph data* such as production Postscript names and glyph orders is stored in a *glyph_data.csv* file for easy maintenance. The glyph names and orders in the fonts are updated from this data in the *preflight* script.
+
+__For an example of how these sources are organized see [Repository Structures].__    
+__To learn more about the *preflight* scripts used to update UFOs from auxliary sources, see [Modifying Font Sources].__
+
+[UFO3 format]: http://unifiedfontobject.org/versions/ufo3/
+[designspace]: https://github.com/fonttools/fonttools/tree/master/Doc/source/designspaceLib
+[pysilfont]: https://github.com/silnrsi/pysilfont
+[GDL (Graphite Description Language)]: https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_techAbout
+[FTML]: https://github.com/silnrsi/ftml
+[SILE]: http://sile-typesetter.org/
+[.fea format]: https://github.com/adobe-type-tools/afdko/blob/develop/docs/OpenTypeFeatureFileSpecification.md
+[.feax format]: https://github.com/silnrsi/pysilfont/blob/master/docs/feaextensions.md
+[Repository Structures]:  Repository_Structures.html
+[Modifying Font Sources]: Modifying_Font_Sources.html
