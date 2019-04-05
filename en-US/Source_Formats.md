@@ -11,11 +11,11 @@ We keep our font sources in open formats so anyone can have full access to them 
 
 ## UFO3 + designspace
 
-Our primary font sources are kept in the [UFO3 format]. It's a clearly documented, platform-neutral open format which allows everyone to access the sources with range of tools. Using this format helps future-proof a font project and makes it accessible and maintainable by others. It also helps with keeping font sources in revision control - a key to any collaborative development. Many foundries are also now using UFO as their primary source format. It is directly supported by all the main font design tools (Glyphs, Robofont, FontLab, Fontfoge, TruFont). *We sometimes store other formats in the repository for archival purposes (typically in source/archive/) but the fonts are produced from the canonical UFO sources.*
+Our primary font sources are kept in the [UFO3 format]. It's a clearly documented, platform-neutral open format which allows everyone to access the sources with range of tools. Using this format helps future-proof a font project and makes it accessible and maintainable by others. It also helps with keeping font sources in revision control - a key to any collaborative development. Many foundries are also now using UFO as their primary source format. It is directly supported by all the main font design tools (Glyphs, Robofont, FontLab, FontForge, TruFont). *We sometimes store other formats in the repository for archival purposes (typically in source/archive/) but the fonts are produced from the canonical UFO sources.*
 
-We also occasionally store some font-wide data in the UFO3 lib.plist
+We also occasionally store some font-wide data in the UFO3 lib.plist.
 
-Our font family structures (styles, masters, instances) are defined in [designspace] files that define the relationships between individual font UFOs.
+Our font family structures (styles, masters, instances) are defined in [designspace] files which describe the relationships between individual font UFOs.
 
 We use normalization tools from the [pysilfont] collection of font utilities to keep the UFOs in a consistent format even after import/export from various other tools and to synchronize them with one another. These keep the font sources clean, vendor-neutral, and friendly to version control systems.
 
@@ -29,7 +29,7 @@ There are some types of data that currently have no canonical place in the UFO3 
 - *Web font demonstration files* (.html, .css) are stored in *web/*.
 - *Tools*, such as project-specific python scripts, are stored in *tools/*.
 
-## Auxilary data sources
+## Auxiliary data sources
 
 There are also some types of data that __do__ have a place in the UFO3 format but are clumsy or awkward to maintain there. We store and edit these in auxiliary files, and use python scripts (usually in *preflight*) to update the UFOs from them before commiting changes to the project repositories:
 
@@ -37,7 +37,7 @@ There are also some types of data that __do__ have a place in the UFO3 format bu
 - *Individual glyph data* such as production Postscript names and glyph orders is stored in a *glyph_data.csv* file for easy maintenance. The glyph names and orders in the fonts are updated from this data in the *preflight* script.
 
 __For an example of how these sources are organized see [Repository Structures].__    
-__To learn more about the *preflight* scripts used to update UFOs from auxliary sources, see [Modifying Font Sources].__
+__To learn more about the *preflight* scripts used to update UFOs from auxiliary sources, see [Modifying Font Sources].__
 
 [UFO3 format]: http://unifiedfontobject.org/versions/ufo3/
 [designspace]: https://github.com/fonttools/fonttools/tree/master/Doc/source/designspaceLib
