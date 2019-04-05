@@ -58,7 +58,7 @@ To run Vagrant use the terminal to navigate to your font projects folder (*/Docu
 
 *Note that this first-time run will take a while - typically 20 minutes or more - while it "provisions" (configures) the VM. Time to grab a cup of tea or coffee...*
 
-While it's installing everything you'll notice hundreds of lines of commands and messages. There may even be warnings among the messages. As long as the final message isn't a bright red warning, and you see the message "smith is now ready to use" you're probably fine.
+While it's installing everything you'll notice hundreds of lines of commands and messages. There may even be warnings among the messages. As long as the final message isn't a bright red warning, and you see the message "smith is now ready to use", you're probably fine.
 
 After the provisioning is complete, briefly test the VM by connecting with it through ssh:
 
@@ -82,7 +82,7 @@ If at any point in this something doesn't work, then the Vagrant provision may h
 
 ### Video walkthrough
 
-Here is a video that shows some of the installation process but skips some of the longer steps. Watch it full screen for more legibility. 
+Here is a video that shows some of the installation process but skips the longer steps. Watch it full screen for more legibility. 
 
 <video src="../assets/videos/setting-up-tools.webm" width="90%" height="90%" controls preload></video>
 
@@ -116,7 +116,7 @@ Vagrant stores certain files in a *.vagrant/* subfolder on the host computer. _R
 
 Watch the command-line output as it automatically downloads, sets up the base VM (also called a box in Vagrant jargon) then runs the provision.sh script which contains instructions on what to install and from where. You can open the provision.sh script in your preferred text editor to see what it does. 
 
-It is also possible to update the VM components separate from running `vagrant provision`. From the command prompt inside the VM run:
+It is also possible to update the VM components separately from running `vagrant provision`. From the command prompt inside the VM run:
 
 > `sudo apt-get update -y -q`  
 > `sudo apt-get upgrade -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-overwrite" -u -V --with-new-pkgs`
