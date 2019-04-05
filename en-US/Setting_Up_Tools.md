@@ -118,9 +118,8 @@ Watch the command-line output as it automatically downloads, sets up the base VM
 
 It is also possible to update the VM components separate from running `vagrant provision`. From the command prompt inside the VM run:
 
-> sudo apt-get update -y -q
->
-> sudo apt-get upgrade -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-overwrite" -u -V --with-new-pkgs
+> `sudo apt-get update -y -q`  
+> `sudo apt-get upgrade -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -o Dpkg::Options::="--force-overwrite" -u -V --with-new-pkgs`
 
 [Ubuntu]: https://www.ubuntu.com/
 [Virtualbox installer]: https://www.virtualbox.org/wiki/Downloads
