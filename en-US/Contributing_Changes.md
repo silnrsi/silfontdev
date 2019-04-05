@@ -9,7 +9,7 @@ title: Contributing Changes
 
 Making changes is one thing, contributing changes so that they can become part of the original project and not just another fork is something else. We want to keep the process of accepting changes low friction but we will probably be reviewing the changes thoroughly.
 
-To maximize the chances of changes making it into an original version we need to consider the following: 
+To maximize the chances of changes making it into an original version we need to consider the following:
 
 - making sure changes are expressed in open formats for interoperability: like UFOs and other non-opaque open standards
 - preparing changes so they are correctly isolated from other changes (a minimal working example) and can easily be tested
@@ -19,8 +19,7 @@ To maximize the chances of changes making it into an original version we need to
 this means updating the copyright statement to add an extra entry but without removing any existing ones. 
 - optionally providing the FONTLOG entry corresponding to the proposed change.
 
-(more details on this later). 
-
+*We intend to provide more detailed guidance on contributing changes via pull requests soon.*
 
 We hope you will enjoy building and contributing to our open fonts and that they will fill a need for you. 
 
