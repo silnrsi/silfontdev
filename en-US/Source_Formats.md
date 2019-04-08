@@ -31,10 +31,10 @@ There are some types of data that currently have no canonical place in the UFO3 
 
 ## Auxiliary data sources
 
-There are also some types of data that __do__ have a place in the UFO3 format but are clumsy or awkward to maintain there. We store and edit these in auxiliary files, and use python scripts (usually in *preflight*) to update the UFOs from them before commiting changes to the project repositories:
+There are also some types of data that __do__ have a place in the UFO3 format but are clumsy or awkward to maintain there. We store and edit these in auxiliary files, and use python scripts (usually in *preflight*) to update the UFOs from them before committing changes to the project repositories:
 
 - *OpenType source code* is stored in the [.fea format] in the UFO (*features.fea)* but may be defined in a separate file using the more efficient and powerful [.feax format]. The .feax is compiled into standard .fea during the build process and may in some cases also be used to update the *features.fea* in the UFOs.
-- *Individual glyph data* such as production Postscript names and glyph orders is stored in a *glyph_data.csv* file for easy maintenance. The glyph names and orders in the fonts are updated from this data in the *preflight* script.
+- *Individual glyph data* such as production glyph names and glyph orders is stored in a *glyph_data.csv* file for easy maintenance. The glyph names and orders in the fonts are updated from this data in the *preflight* script.
 
 __For an example of how these sources are organized see [Repository Structures].__    
 __To learn more about the *preflight* scripts used to update UFOs from auxiliary sources, see [Modifying Font Sources].__

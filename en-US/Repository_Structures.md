@@ -7,17 +7,17 @@ category: Repository Structures
 title: Repository Structures
 ---
 
-Our projects use a consistent directory structure for both our source repositories and release packages. So if you know your way around one of our projects you can easily understand others. We'd be very happy to see others adopt this overall structure, too, so please consider it for your projects.
+Our projects use a consistent directory structure for both our source repositories and release packages. So if you know your way around one of our projects you can easily understand all of them. We'd be very happy to see others adopt this overall structure, too, so please consider it for your projects.
 
-We talk about repositories because we assume that the project directory structure and all the files it contains will be tracked with [git]. We make our repositories available on [GitHub], but there's nothing about our structures or processes that depends on that service.
+We talk about repositories because our project directory structures and all the files they contain are tracked with [git]. We make our repositories available on [GitHub], but there's nothing about our structures or processes that depends on that service.
 
 Each of our projects (which usually contain only a single font family) use a single dedicated project folder that contains all the font sources, so that it's self-contained. We avoid using more complicated dependency structures such as [git] submodules - they often bring more frustration and confusion than benefits.
 
-Our convention is to name the project folder __font-*nameoffontfamily*/__ as in *font-shimenkan* or *font-andika-mtihani*.
+Our convention is to name the project folder __font-*nameoffontfamily*__ as in *font-shimenkan* or *font-andika-mtihani*.
 
 ## Example structure
 
-Here is an annotated example of our project repository structure based on [Andika Mtihani]'s public git repository. Files that we normally have in all projects are in __bold__ - all others are optional and may differ from project to project. Files and folders not in the [Andika Mtihani] project are in ( parentheses ) and are provided as a guide to other projects.
+Here is an annotated example of our project repository structure based on [Andika Mtihani]'s public git repository. Files that we normally have in all projects are in __bold__. All others are optional and may differ from project to project. Files and folders not in the [Andika Mtihani] project are in ( parentheses ) and are provided as a guide to other projects.
 
 - __.gitattributes__ — *git attributes configuration hidden file tailored for font projects*
 - __.gitignore__ — *git ignore configuration hidden file tailored for font projects*
@@ -48,7 +48,7 @@ Here is an annotated example of our project repository structure based on [Andik
   - __glyph_data.csv__ — *glyph-specific data such as production glyph names and glyph orders*
   - archive/ — *folder for legacy formats if needed for archival purposes*
   - ( graphite/ — *folder for Graphite source code* )
-  - logs/ — *folder for log files*
+  - logs/ — *folder for log files, only needed as a placeholder to make tools happy*
   - ( masters/ — *folder for master UFOs for projects involving interpolated instances* )
 - __tests/__ — *folder for various test documents and data files*
 - ( tools/ — *folder for project-specific scripts and utilities* )
@@ -56,7 +56,7 @@ Here is an annotated example of our project repository structure based on [Andik
 
 ## Ignored files: temporary files, generated files ###
 
-By default, the generated results of builds (including the generated fonts) will appear in a separate folder not stored in the repository: __results/__ . Temporary files and generated artifacts like backups, logs, test results, specimens, etc. are not stored in the repository and are set to be ignored by git via the __.gitignore__ configuration file. There is some flexibility though, as certain source files are generated or modified by scripts at various times in the lifecycle of a project.
+By default, the generated results of builds (including the generated fonts) will appear in a separate *results/* folder not stored in the repository. Temporary files and generated artifacts like backups, logs, test results, specimens, etc. are not stored in the repository and are set to be ignored by git via the *.gitignore* configuration file. There is some flexibility though, as certain source files are generated or modified by scripts at various times in the lifecycle of a project.
 
 [git]: https://git-scm.com/
 [GitHub]: https://github.com/

@@ -58,21 +58,21 @@ By default the build results will be in a *results/* folder inside the project f
 
 ## Build release packages
 
-Smith also supports building both development and release versions of release archives in .zip and .tar.xz formats. These contain the fonts and key user documentation.
+Smith also supports building release archives in .zip and .tar.xz formats, and in both development and release versions. These contain the fonts and key user documentation.
 
-The following commands will produce development versions of the current work. "zip" is the Windows-targeted artifact with Windows line-endings and "tar.xz" is the macOS/Linux-targeted artifact with Unix line-endings. The current git hash and a -dev suffix will be added to the name of the artifacts to help distinguish development vs. released versions: 
+The following commands will produce development versions of the current work. "zip" is the Windows-targeted artifact with Windows line-endings and "tarball" is the macOS/Linux-targeted artifact with Unix line-endings and a .tar.xz extension. The current git hash and a *-dev* suffix will be added to the name of the artifacts to help distinguish development vs. released versions:
 
-> smith zip 
+> `smith zip`
 
-> smith tarball
+> `smith tarball`
 
-To produce release versions of the current work without the git hash and -dev suffix, both in "zip" and "tar.xz" formats, type: 
+To produce release versions of the current work without the git hash and *-dev* suffix, both in zip and tar.xz formats, type:
 
-> smith release
+> `smith release`
 
 ## Video walkthrough
 
-Watch this full screen for more legibility. 
+Watch this full screen for more legibility.
 
 <video src="../assets/videos/building-font-projects-steps.webm" width="90%" height="90%" controls preload></video>
 
@@ -84,7 +84,7 @@ Building a font involves numerous steps and various programs, which, if done by 
 
 By making these processes repeatable, including for a number of fonts at the same time, projects can be shared with others simply, or - better yet - they can be included in a CI (Continuous Integration) system. This enables fonts to be developed using libre/open source software tools and open, collaborative methodologies.
 
-The toolchain components (Smith itself and all the various components) are all open and do not place any undue restricted licensing requirements on the user or developer. You can run it on any system via a VM, and you can run it on a Continuous Integration (CI) server as well. You are welcome to copy the whole VM to other computers or share it with colleagues and friends without restrictions. 
+The toolchain components (Smith itself and all the various components) are all open and do not place any undue restricted licensing requirements on the user or developer. You can run them on any system via a VM, and you can run them on a Continuous Integration (CI) server as well. You are welcome to copy the whole VM to other computers or share it with colleagues and friends without restrictions. 
 
 [Setting Up Tools]: Setting_Up_Tools.html
 [Smith]: https://github.com/silnrsi/smith

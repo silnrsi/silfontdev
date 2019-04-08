@@ -15,7 +15,7 @@ To maximize the chances of changes making it into an original version we need to
 - preparing changes so they are correctly isolated from other changes (a minimal working example) and can easily be tested
 - opening a Github issue to describe the proposed change 
 - making a diff or a branch available publicly containing the changes, then submitting a PR (Pull Request) or MR (Merge Request)
-- understanding the way copyright and the OFL (Open Font License) work and how to fill in an copyright statement and font metadata appropriately:
+- understanding the way copyright and the OFL (SIL Open Font License) work and how to fill in an copyright statement and font metadata appropriately:
 this means updating the copyright statement to add an extra entry but without removing any existing ones. 
 - optionally providing the FONTLOG entry corresponding to the proposed change.
 

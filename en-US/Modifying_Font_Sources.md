@@ -11,11 +11,12 @@ If you want to make modifications to our font projects you are very welcome to d
 
 ## Get the latest version and confirm that it builds for you
 
-Before you begin making any changes, please be sure you have the most recent version of the source files. If you've just checked out (cloned) the project you will have the latest, however if it's been a few days (or months) be sure to update your local copy. In git terminology, be sure you 'pull' changes.
+Before you begin making any changes, please be sure you have the most recent version of the source files. If you've just checked out (cloned) the project you will have the latest, however if it's been a few days (or months) be sure to update your local copy. In git terminology, be sure you 
+"pull" changes.
 
 ## Change the font names
 
-You will want to pick a new name for your modified font so it won't be confused with the original font. Almost all SIL fonts have [Reserved Font Names (RFNs)], so if you modify and redistribute the fonts you will need to pick a name that does not contain the RFNs. In the case of Andika Mtihani we can't use a name that includes "Andika" or "SIL". But we can pick something creative. IOW you can't modify Andika Mtihani and redistribute the modified version as "Andika Mtihani" or any name containing "Andika".
+You will want to pick a new name for your modified font so it won't be confused with the original font. Almost all SIL fonts have [Reserved Font Names (RFNs)], so if you modify and redistribute the fonts you will need to pick a name that does not contain the RFNs. In the case of Andika Mtihani you can't use a name that includes "Andika" or "SIL". But you can pick something creative. IOW you can't modify Andika Mtihani and redistribute the modified version as "Andika Mtihani" or any name containing "Andika".
 
 There are a few places where names appear in the source files and may need to be changed:
 
@@ -33,7 +34,7 @@ There are many ways to change the fonts:
 - __Use scripts to make changes__, such as those provided in [pysilfont]. This is useful for making changes that affect many files or glyphs.
 - __Open the UFOs in GUI design apps__, such as [Robofont], [Glyphs], or [FontForge]. These require extra effort, as these apps tend to make massive changes to the fonts that have to be controlled and managed. In some cases, import/export can cause data loss, so be careful! See the section on *Using GUI design tools*, below.
 
-__However you modify the fonts or related files you likely need to normalize the fonts before committing the changes to your repository - see next section.__
+__If you modify the fonts or related files you likely need to normalize the fonts before committing the changes to your repository - see next section.__
 
 ## Normalize and commit
 
@@ -41,7 +42,7 @@ The UFO3 source format is a bit unusual (and frustrating) in that it does not al
 
 The solution is *normalization* - a process that formats and organizes UFOs in a consistent manner. Normalization can be done with a [pysilfont] command: [psfnormalize]. Our projects, however, have a very simple way to normalize all the UFOs in a project, synchronize the metadata between family members, and update the UFOs from auxiliary data — *preflight*.
 
-Whenever you change anything in the project start up your VM, `vagrant ssh` to connect with it, then navigate to the project folder and run:
+Whenever you change anything in the project, start up your VM, `vagrant ssh` to connect with it, then navigate to the project folder and run:
 
 > `./preflight`
 
@@ -68,10 +69,10 @@ We currently use the [Glyphs] font editor to take care of the design side of fon
 
 To load the current font sources into Glyphs we do not open the UFOs directly in Glyphs. Instead, we use the following process using project-specific scripts (run from within the vagrant VM):
 
-- Run `./preglyphs` from the main project folder using the terminal. This synthesizes a temporary .glyphs file from the existing UFO sources and corresponding designspaces.
-- Open the .glyphs file in Glyphs, make changes, and save.
-- Run `./preflightg` from the main project folder. This reads the .glyphs file and exports UFOs, and then runs all the steps in the normal *preflight* script to nomalize and sync the UFOs.
-- Review the changes in your git client and commit the changes you want to keep.
+- Run `./preglyphs` from the individual project folder using the terminal. This synthesizes a temporary *.glyphs* file from the existing UFO sources and corresponding designspaces.
+- Open the *.glyphs* file in Glyphs, make changes, and save.
+- Run `./preflightg` from the individual project folder. This reads the *.glyphs* file and exports UFOs, and then runs all the steps in the normal *preflight* script to normalize and sync the UFOs.
+- Review the changes in your git client and commit the changes you wish to keep.
 
 This is the best tested and recommended method for modifying fonts with a dedicated font design tool. *Most, but not all, of our projects include these scripts.*
 
