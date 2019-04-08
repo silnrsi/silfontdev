@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 layout: bookpage
-weight: 400
+weight: 300
 outlevel: 4
 category: Workflow Overview
 title: Workflow Overview
@@ -16,7 +16,7 @@ This is the high-level overview of the workflow and the various steps involved:
 - opening the project folder on the host computer shared with the VM 
 - from the command-line, logging into the VM to run smith targets (from inside the VM) on the font sources on the host computer
 	- cleaning the working directory of previous builds and temporary files if any
-	- configuring the project and checking if all the needed components are available
+	- configuring the project and checking if we have all the needed components
 	- running the build
 	- running the tests
 	- generating a development zip and tarball
