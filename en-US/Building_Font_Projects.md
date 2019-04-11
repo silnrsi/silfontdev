@@ -10,7 +10,9 @@ title: Building Font Projects
 Once the VM is configured, provisioned, and working, you're ready to start building fonts!
 *This assumes that you have completed all four steps in [Setting Up Tools].*
 
-Here is a walkthrough of how to download one of SIL's font projects and build it locally. The main tool used to run the process is [Smith], a Python-based tool for building, testing, and maintaining fonts and other writing system implementation components. It orchestrates and integrates various tools and utilities to make a standards-based open font production workflow easier to manage. 
+Here is a walkthrough of how to download one of SIL's font projects and build it locally. The main tool used to run the process is [Smith], a Python-based tool for building, testing, and maintaining fonts and other writing system implementation components. It orchestrates and integrates various tools and utilities to make a standards-based open font production workflow easier to manage.
+
+*Note that this build process is not only for SIL font projects. It will work with any projects that use similar source formats, repository structure, and have a wscript file.*
 
 ## Check out a font project repository
 

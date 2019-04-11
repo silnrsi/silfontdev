@@ -13,7 +13,7 @@ We talk about repositories because our project directory structures and all the 
 
 Each of our projects (which usually contain only a single font family) use a single dedicated project folder that contains all the font sources, so that it's self-contained. We avoid using more complicated dependency structures such as [git] submodules - they often bring more frustration and confusion than benefits.
 
-Our convention is to name the project folder __font-*nameoffontfamily*__ as in *font-shimenkan* or *font-andika-mtihani*.
+Our convention is to name the project folder __font-*name-of-font-family*__ as in *font-shimenkan* or *font-andika-mtihani*.
 
 ## Example structure
 

@@ -92,7 +92,7 @@ There may also be some other additions depending on the project or Robofont 3 ve
 
 ### FontForge
 
-The most recently released version of [FontForge] (2019-03-17) has vastly improved UFO3 support. However there are some minor problems that can occur. We'll provide a workflow once we've finished testing. Versions prior to 2019-03-17 should not be used with our projects as they will lose significant data.
+The most recently released version of [FontForge] (2019-03-17) has vastly improved UFO3 support. However there are some minor problems that can occur. We'll provide a workflow once we've finished testing. Versions prior to 2019-03-17 should not be used with our projects as they may lose significant data.
 
 *FontForge is a key tool in our goal to provide a fully libre/open source workflow, so we are committed to making it work well if possible.*
 
