@@ -92,9 +92,21 @@ There may also be some other additions depending on the project or Robofont 3 ve
 
 ### FontForge
 
-The most recently released version of [FontForge] (2019-03-17) has vastly improved UFO3 support. However there are some minor problems that can occur. We'll provide a workflow once we've finished testing. Versions prior to 2019-03-17 should not be used with our projects as they may lose significant data.
+The most recently released version of [FontForge] (2019-04-13) has vastly improved UFO3 support. It's important to use that release or later, and also be sure that your VM has recently been provisioned, as we have recently added built-in support for handling FontForge-produced UFOs to our *pysilfont* tools. The workflow is:
 
-*FontForge is a key tool in our goal to provide a fully libre/open source workflow, so we are committed to making it work well if possible.*
+- Open individual UFOs in FontForge, make changes *(but do not save!)*
+- Choose File / Generate Fonts... and specify the output format as *Unified Font Object (UFO3)*, replacing the original UFO. *You can now quit FontForge - there is no need to save the file.*
+- Run `./preflightff` to normalize and sync. Note that this is a special FontForge-specific version of *preflight*.
+- Review the changes in your git client and commit the changes you want to keep.
+
+Note: Most of our projects do not have the special *preflightff* script yet. If the project doesn't yet have it you can run the normal `./preflight`, but be aware that if there are background glyphs FontForge will copy anchors and Unicode values between layers. You can avoid this by creating your own *preflightff* script based on the example in [Andika Mtihani]. We'll be adding *preflightff* files to our projects as soon as we can.
+
+This FontForge workflow works well, but there are two issues that you may encounter:
+
+- If the UFO contains a features.fea file, FontForge will likely change it considerably. You will want to use your git client to discard any changes to that file prior to commit.
+- FontForge will remove any `note` elements it finds in glif files.
+
+It is also possible to use FontForge on another OS (and macOS in particular) to modify the UFOs in a folder shared with the VM, then switch to the VM and run *preflightff* there.  
 
 ### FontLab VI
 
@@ -114,3 +126,4 @@ Recent versions of [FontLab VI] have improved UFO3 support, however there are st
 [Glyphs]: https://glyphsapp.com/
 [glyphsLib]: https://github.com/googlei18n/glyphsLib
 [FontLab VI]: https://www.fontlab.com/font-editor/fontlab-vi/
+[Andika Mtihani]: https://github.com/silnrsi/font-andika-mtihani/blob/master/preflightff
