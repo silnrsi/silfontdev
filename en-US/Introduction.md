@@ -14,7 +14,7 @@ The font we will use as our practical example throughout this guide is [Andika M
 
 In this guide we assume that you:
 
-- have access to a computer running macOS, Windows, or Ubuntu where you already have or can install the following software: Virtualbox, Vagrant, Bash and Git. We are currently using a VM (Virtual Machine) based on Ubuntu 16.04 LTS (Xenial) - see [Setting Up Tools].
+- have access to a computer running macOS, Windows, or Ubuntu where you already have or can install the following software: Virtualbox, Vagrant, Bash and Git. We are currently using a VM (Virtual Machine) based on Ubuntu 18.04 LTS (Bionic) - see [Setting Up Tools].
 - are familiar with the basics of using the terminal (or command line). There is no graphical interface available for using the various tools. *Don't worry, simple cut and paste instructions will be available.*
 - have some basic understanding of how to use distributed version control systems - [Git] and [GitHub] in particular. *If all you want to do is build fonts locally we'll provide the minimal info you need.*
 

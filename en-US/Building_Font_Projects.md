@@ -10,7 +10,7 @@ title: Building Font Projects
 Once the VM is configured, provisioned, and working, you're ready to start building fonts!
 *This assumes that you have completed all four steps in [Setting Up Tools].*
 
-Here is a walkthrough of how to download one of SIL's font projects and build it locally. The main tool used to run the process is [Smith], a Python-based tool for building, testing, and maintaining fonts and other writing system implementation components. It orchestrates and integrates various tools and utilities to make a standards-based open font production workflow easier to manage.
+Here is a walkthrough of how to download one of SIL's font projects and build it locally. The main tool used to run the process is [Smith], a Python3-based tool for building, testing, and maintaining fonts and other writing system implementation components. It orchestrates and integrates various tools and utilities (many written in Python3) to make a standards-based open font production workflow easier to manage.
 
 *Note that this build process is not only for SIL font projects. It will work with any projects that use similar source formats, repository structure, and have a wscript file.*
 
@@ -27,11 +27,13 @@ This will checkout a local working copy of the git repository into a *font-andik
 Start up the VM and connect to it via ssh
 
 > `vagrant up`  
+
 > `vagrant ssh`
 
 Navigate to the newly checked out repository:
 
 > `cd /smith`  
+
 > `cd font-andika-mtihani`
 
 ## Build using Smith
@@ -51,7 +53,9 @@ Run the whole test suite:
 There are times, especially if you've changed the project *wscript*, when you need to wipe the results clean of any temporary artifacts. If at any time you want to start with a fresh build, run:
 
 > `smith distclean`  
+
 > `smith configure`  
+
 > `smith build`
 
 ## Review build results
@@ -82,7 +86,7 @@ Watch this full screen for more legibility.
 
 *For those of you wanting to know more about [Smith]:*
 
-Building a font involves numerous steps and various programs, which, if done by hand, would be prohibitively slow. Even working out what those steps are can take a lot of work. Smith uses a dedicated file, based on python syntax, at the root of the project - the *wscript* file - to allow the user to describe how to build the font. By chaining the different build steps intelligently, Smith reduces build times to seconds rather than minutes or hours, and makes build, test, fix, repeat cycles very manageable.
+Building a font involves numerous steps and various programs, which, if done by hand, would be prohibitively slow. Even working out what those steps are can take a lot of work. Smith uses a dedicated file, based on Python syntax, at the root of the project - the *wscript* file - to allow the user to describe how to build the font. By chaining the different build steps intelligently, Smith reduces build times to seconds rather than minutes or hours, and makes build, test, fix, repeat cycles very manageable.
 
 By making these processes repeatable, including for a number of fonts at the same time, projects can be shared with others simply, or - better yet - they can be included in a CI (Continuous Integration) system. This enables fonts to be developed using libre/open source software tools and open, collaborative methodologies.
 

@@ -8,7 +8,7 @@ title: Setting Up Tools
 ---
 
 Our projects use a consistent set of libre/open tools for building and modifying fonts. To build our fonts you will need to use the same toolchain and workflow we use.
-To allow for easier installation, use, and management of the various software tools which form part of the toolchain, we use a Virtual Machine (VM). This VM is currently based on [Ubuntu] 16.04 LTS (Xenial). *We are working on a newer version based on Ubuntu 18.04 LTS (Bionic) and python3 but it's not fully ready yet. Stay tuned. (It is also possible to separately install required packages directly on an Ubuntu VM with a graphical interface, but that is not covered in this guide.)*
+To allow for easier installation, use, and management of the various software tools which form part of the toolchain, we use a Virtual Machine (VM). This VM is currently based on [Ubuntu] 18.04 LTS (Bionic) and uses Python3. *(It is also possible to separately install the required packages directly on an Ubuntu VM with a graphical interface, but that is not covered in this guide.)*
 
 The process of setting up the toolchain involves:
 
@@ -124,6 +124,6 @@ It is also possible to update the VM components separately from running `vagrant
 [Ubuntu]: https://www.ubuntu.com/
 [Virtualbox installer]: https://www.virtualbox.org/wiki/Downloads
 [64-bit Vagrant installer]:  https://www.vagrantup.com/downloads.html
-[Vagrantfile]: https://github.com/silnrsi/smith/raw/master/vm-install/Vagrantfile
-[provision.sh]: https://github.com/silnrsi/smith/raw/master/vm-install/provision.sh
+[Vagrantfile]: https://github.com/silnrsi/smith/raw/master/vm-install/bionic/Vagrantfile
+[provision.sh]: https://github.com/silnrsi/smith/raw/master/vm-install/bionic/provision.sh
 [Building Font Projects]: Building_Font_Projects.html
