@@ -51,7 +51,10 @@ Here is an annotated example of our project repository structure based on [Andik
   - logs/ — *folder for log files, only needed as a placeholder to make tools happy*
   - ( masters/ — *folder for master UFOs for projects involving interpolated instances* )
 - __tests/__ — *folder for various test documents and data files*
+- __references/__ — *folder for font binaries used for regression testing*
 - ( tools/ — *folder for project-specific scripts and utilities* )
+  - ( fontbakery/ — *folder for project-specific fontbakery checks* )
+  - ( lib/ — *folder for project-specific libraries* )
 - ( web/ — *example files for self-hosted webfonts* )
 
 ## Ignored files: temporary files, generated files ###
