@@ -8,7 +8,8 @@ title: Setting Up Tools
 ---
 
 Our projects use a consistent set of libre/open tools for building and modifying fonts. To build our fonts you will need to use the same toolchain and workflow we use.
-To allow for easier installation, use, and management of the various software tools which form part of the toolchain, we use a Virtual Machine (VM). This VM is currently based on [Ubuntu] 18.04 LTS (Bionic) and uses Python3. *(It is also possible to separately install the required packages directly on an Ubuntu VM with a graphical interface, but that is not covered in this guide.)*
+
+To allow for easier installation, use, and management of the various software tools which form part of the toolchain, we use a Virtual Machine (VM). This VM is currently based on [Ubuntu] 20.04 LTS (Focal) and uses Python3. *(It is also possible to separately install the required packages directly on an Ubuntu VM with a graphical interface, but that is not covered in this guide.)*
 
 The process of setting up the toolchain involves:
 
@@ -23,7 +24,7 @@ Please bear in mind that __the toolchain is fairly large (over 500 software comp
 
 Virtualbox enables us to spin up a new, separate, Ubuntu-based environment in a guest VM without any risk to the host computer or the files we are working on. To install Virtualbox:
 
-- Download the [Virtualbox installer] for the preferred host OS. __Please stay with version series 5.2.x for now__.
+- Download the [Virtualbox installer] for the preferred host OS. __Mac and Linux users can use the latest Virtualbox 6 release. Windows users should stay with version series 5.2.x for now__.
 - Run the installer. You may also need to reboot.
 - Install the corresponding Extension Pack.
 
@@ -125,6 +126,6 @@ It is also possible to update the VM components separately from running `vagrant
 [Ubuntu]: https://www.ubuntu.com/
 [Virtualbox installer]: https://www.virtualbox.org/wiki/Downloads
 [64-bit Vagrant installer]:  https://www.vagrantup.com/downloads.html
-[Vagrantfile]: https://github.com/silnrsi/smith/raw/master/vm-install/bionic/Vagrantfile
-[provision.sh]: https://github.com/silnrsi/smith/raw/master/vm-install/bionic/provision.sh
+[Vagrantfile]: https://github.com/silnrsi/smith/raw/master/vm-install/focal/Vagrantfile
+[provision.sh]: https://github.com/silnrsi/smith/raw/master/vm-install/focal/provision.sh
 [Building Font Projects]: Building_Font_Projects.html
