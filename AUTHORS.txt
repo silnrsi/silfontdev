@@ -2,3 +2,4 @@
 
 Victor Gaultney
 Nicolas Spalinger
+(with feedback from the rest of the WSTech team)
