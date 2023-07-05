@@ -16,8 +16,8 @@ Because of current performance issues with native Docker on Windows filesystem, 
 
 ## Adjusting the resources allocated to WSL in Windows
 
-By default Windows automatically allocates resources to the WSL VM, but you can adjust these settings by dropping this configuration file into *%USERPROFILE%\.wslconfig* (or *C:\Users\username\.wslconfig* where *username* is your Windows username).
-You can adjust the defaults settings to the specifics resources available on your computer. 
+By default Windows automatically allocates resources to the WSL VM, but you can adjust these settings by dropping this [.wslconfig configuration file](https://github.com/silnrsi/anvil/blob/main/.wslconfig) into *%USERPROFILE%\.wslconfig* (or *C:\Users\username\.wslconfig* where *username* is your Windows username).
+You can adjust the defaults settings to the specific resources available on your computer. 
 
 ## Setting up a fonts project folder
 
