@@ -5,5 +5,5 @@ exclude: ["en-US/images/precompressed/", "node_modules", "Gruntfile.js", "packag
 url: http://silnrsi.github.io/silfontdev
 baseurl: /silfontdev
 repourl: //github.com/silnrsi/silfontdev
-title: SIL Font Development Notes
-subtitle: How to build, modify, and contribute to SIL International font projects.
+title: SIL Font Development Guide
+subtitle: How to build, modify, and contribute to SIL International font projects

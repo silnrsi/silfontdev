@@ -7,7 +7,7 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h1>{{page.outlevel}} {{ page.title }}</h1>
+          <h1>{{page.outlevel}}. {{ page.title }}</h1>
           {{ content }}
           <nav id="post-nav" class="clearfix">
             {% for p in pageList reversed %}
@@ -16,7 +16,7 @@
 
                 {% if currentPost and p.title != site.title %}
                   <a class="prev" href="{{site.baseurl}}{{p.url}}">
-                    <span>Prev</span>
+                    <span>Previous</span>
                     <span><h3>{{p.title}}</h3></span>
                   </a>
                   {% assign currentPost = false %}
@@ -80,7 +80,7 @@
               {% endif %}
             {% endfor %}
           </ol>
-          <div class="changes"> <a href="https:{{site.repourl}}/commits">Review recent changes to this guide</a></div>
+          <div class="changes"> <p>Last update: {{ site.time | date_to_long_string }} <br> <a href="https:{{site.repourl}}/commits">Review recent changes</a></div>
         </aside>
       </div>
     </div>
