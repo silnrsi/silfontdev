@@ -1,97 +1,111 @@
 ---
 published: true
 layout: bookpage
-weight: 600
-outlevel: 6
+weight: 700
+outlevel: 7
 category: Building Font Projects
 title: Building Font Projects
 ---
 
-Once the VM is configured, provisioned, and working, you're ready to start building fonts!
-*This assumes that you have completed all four steps in [Setting Up Tools].*
+Once the container is up and running, you can log into it and see your shared font project files as shared from the host into the guest. This means you're ready to start building fonts!
+*This assumes that you have completed all the steps in [Setting Up Tools].*
 
-Here is a walkthrough of how to download one of SIL's font projects and build it locally. The main tool used to run the process is [Smith], a Python3-based tool for building, testing, and maintaining fonts and other writing system implementation components. It orchestrates and integrates various tools and utilities (many written in Python3) to make a standards-based open font production workflow easier to manage.
+Building a font involves numerous steps using various programs, which, if done by hand, would be prohibitively slow. Even working out what those steps are can take a lot of work. By making these processes repeatable, including for a number of fonts at the same time, projects can be shared with others simply, or - better yet - they can be included in a CI (Continuous Integration)   system. This enables fonts to be developed using libre/open source software tools and open, collaborative methodologies.
 
-*Note that this build process is not only for SIL font projects. It will work with any projects that use similar source formats, repository structure, and have a wscript file.*
+The main tool used to run the process is [Smith], a Python-based tool for building, testing, and maintaining fonts. It orchestrates and integrates various tools and utilities (many written in Python) to make a standards-based open font production workflow easier to manage. Smith uses a dedicated file, based on Python syntax, at the root of the project - the *wscript* file - to describe how to build the font. By chaining the different build steps intelligently, Smith reduces build times to minutes rather than hours, and makes build, test, fix, repeat cycles very manageable.
 
-## Check out a font project repository
+The toolchain components (Smith itself and all the various components) are all open and do not place any undue restricted licensing requirements on the user or developer. 
+ 
+Here is a walkthrough of how to download one of SIL's font projects and build it locally. 
 
-On your local machine (not in the VM) navigate to your font projects folder (typically *Documents/work/fonts*) and check out the font repository, as in this example using [Andika Mtihani]:
+*Note that this build process is not only for SIL font projects. It will work with any projects that use similar source formats, repository structure and the smith toolchain needed to set up the build according to the wscript file.*
 
-> `git clone https://github.com/silnrsi/font-andika-mtihani`
+## Checking out a font project repository
 
-This will checkout a local working copy of the git repository into a *font-andika-mtihani* folder within your font projects folder. You can also use a GUI client for git to do this if you prefer that method.
+MacOS and Ubuntu users can navigate to the font projects folder (*~/repos/wstechfonts* by default) and check out a new font project repository, for example [Andika Mtihani]:
 
-## Start the VM and navigate to the project folder
+To get into the project font folder type:
 
-Start up the VM and connect to it via ssh
+`cd ~/repos/wstechfonts`
 
-> `vagrant up`  
+`git clone https://github.com/silnrsi/font-andika-mtihani`
 
-> `vagrant ssh`
+This will checkout a local working copy of the git repository into a *font-andika-mtihani* folder within your font projects folder which then will be available from inside the container. 
 
-Navigate to the newly checked out repository:
+You can use a GUI git client if you'd like on macOS and Ubuntu to do this checking out.  But if you are using Windows, you must use a git GUI client (like [Sourcetree] for example) to do this and only that client. Using git on the command-line either in the VM or the container on the same project will change the index back and forth which will confuse either git client and result in making it extremely slow. 
 
-> `cd /smith`  
+## Starting the container and navigating to the font project folder
 
-> `cd font-andika-mtihani`
+To start up the container, type:
 
-## Build using Smith
+`anvil up`  
 
-Configure Smith if this is the first build for this project in your VM. This checks to see if all needed tools are installed:
+to log into the container, type:
 
-> `smith configure`
+`anvil ssh`
 
-Build the fonts:
+To navigate to the newly checked out repository (by default the container opens a prompt in the */smith* folder which is where all your font projects should be shared from the host computer), type:
 
-> `smith build`
+`cd font-andika-mtihani`
 
-Run the whole test suite:
+## Building and running test using Smith
 
-> `smith alltests`
+Running the various smith targets assumes that your prompt shows that you are at the root of the font project like */smith/font-andika-mtihani*
 
-There are times, especially if you've changed the project *wscript*, when you need to wipe the results clean of any temporary artifacts. If at any time you want to start with a fresh build, run:
+To configure the project, this checks if all necessary tools are properly available, type:
 
-> `smith distclean`  
+`smith configure`
 
-> `smith configure`  
+To build the fonts, type:
 
-> `smith build`
+`smith build`
 
-## Review build results
+To run the whole test suite, type
 
-By default the build results will be in a *results/* folder inside the project folder (*font-andika-mtihani/results/*). You can simply browse through these files on your host computer.
+`smith alltests`
 
-## Build release packages
+To run the FontBakery checks (via the pysilfont profile), type:
 
-Smith also supports building release archives in .zip and .tar.xz formats, and in both development and release versions. These contain the fonts and key user documentation.
+`smith ttfchecks`
 
-The following commands will produce development versions of the current work. "zip" is the Windows-targeted artifact with Windows line-endings and "tarball" is the macOS/Linux-targeted artifact with Unix line-endings and a .tar.xz extension. The current git hash and a *-dev* suffix will be added to the name of the artifacts to help distinguish development vs. released versions:
+There are times, especially if you've changed the project *wscript*, when you need to wipe the results clean of any temporary artifacts, cache or config files. If at any time you want to start with a fresh build, type:
 
-> `smith zip`
+`smith distclean` 
 
-> `smith tarball`
+Then to reconfigure and redo a fresh build, type:  
 
-To produce release versions of the current work without the git hash and *-dev* suffix, both in zip and tar.xz formats, type:
+`smith configure`  
 
-> `smith release`
+`smith build`
 
-## Video walkthrough
+## Reviewing build results
 
-Watch this full screen for more legibility.
+By default the build artifacts will be stored in a *results/* folder inside the project folder (*font-andika-mtihani/results/*). You can simply browse through these files on your host computer with your preferred file manager.
 
-<video src="../assets/videos/building-font-projects-steps.webm" width="90%" height="90%" controls preload></video>
+## Building release packages
 
-## Understanding Smith
+Smith also supports building release archives in .zip and .tar.xz formats, and in both development and release versions. These contain the fonts, author and licensing information as well as key documentation.
 
-*For those of you wanting to know more about [Smith]:*
+"zip" is the Windows-targeted artifact with Windows line-endings and "tarball" is the macOS/Ubuntu-targeted artifact with Unix line-endings and a .tar.xz extension. The current git hash (the current revision) and a *-dev* suffix will be added to the internal versions and the filenames of the artifacts to help distinguish between development vs. released versions. To produce development versions artifacts, type:
 
-Building a font involves numerous steps and various programs, which, if done by hand, would be prohibitively slow. Even working out what those steps are can take a lot of work. Smith uses a dedicated file, based on Python syntax, at the root of the project - the *wscript* file - to allow the user to describe how to build the font. By chaining the different build steps intelligently, Smith reduces build times to seconds rather than minutes or hours, and makes build, test, fix, repeat cycles very manageable.
+`smith zip`
 
-By making these processes repeatable, including for a number of fonts at the same time, projects can be shared with others simply, or - better yet - they can be included in a CI (Continuous Integration) system. This enables fonts to be developed using libre/open source software tools and open, collaborative methodologies.
+`smith tarball`
 
-The toolchain components (Smith itself and all the various components) are all open and do not place any undue restricted licensing requirements on the user or developer. You can run them on any system via a VM, and you can run them on a Continuous Integration (CI) server as well. You are welcome to copy the whole VM to other computers or share it with colleagues and friends without restrictions. 
+To produce release versions, without the git hash and *-dev* suffix indicating a development version, both in zip and tar.xz formats, type:
+
+`smith release`
+
+## Debugging smith targets
+
+If a smith step generates an error, and the existing logs don't help, you can increase the verbosity of that particular build step by typing, for example: (the more v added the more verbosity)
+
+`smith build -vv` 
+
+`smith pdf -vvv` 
+
 
 [Setting Up Tools]: Setting_Up_Tools.html
 [Smith]: https://github.com/silnrsi/smith
 [Andika Mtihani]: https://github.com/silnrsi/font-andika-mtihani
+[Sourcetree]: https://www.sourcetreeapp.com
