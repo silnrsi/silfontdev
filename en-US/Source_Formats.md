@@ -43,7 +43,7 @@ __To learn more about the *preflight* scripts used to update UFOs from auxiliary
 [UFO3 format]: https://unifiedfontobject.org/versions/ufo3/
 [designspace]: https://github.com/fonttools/fonttools/tree/main/Doc/source/designspaceLib/index.rst
 [pysilfont]: https://github.com/silnrsi/pysilfont
-[GDL (Graphite Description Language)]: http://silnrsi.github.io/graphite/graphite_devFont#fontDev
+[GDL (Graphite Description Language)]: https://silnrsi.github.io/graphite/graphite_devFont#fontDev
 [FTML]: https://github.com/silnrsi/ftml
 [SILE]: https://sile-typesetter.org/
 [TeX]: https://tug.org/xetex/

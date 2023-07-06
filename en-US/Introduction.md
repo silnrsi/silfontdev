@@ -30,7 +30,7 @@ __To jump right into configuring your computer see [Setting Up Tools].__
 *&mdash; [SIL International's WSTech team] (Writing Systems Technology)* - [AUTHORS] 
 
 
-[SIL International font projects]: http://software.sil.org/fonts
+[SIL International font projects]: https://software.sil.org/fonts
 [Andika Mtihani]: https://github.com/silnrsi/font-andika-mtihani
 [Setting Up Tools]: Setting_Up_Tools.html
 [Git]: https://git-scm.com/
@@ -39,5 +39,5 @@ __To jump right into configuring your computer see [Setting Up Tools].__
 [OFL-FAQ]: https://scripts.sil.org/OFL-FAQ_web
 [Source Formats]: Source_Formats.html
 [Workflow Overview]: Workflow_Overview.html
-[SIL International's WSTech team]: http://software.sil.org/wstech 
+[SIL International's WSTech team]: https://software.sil.org/wstech 
 [AUTHORS]: ../AUTHORS.txt

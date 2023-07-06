@@ -7,7 +7,7 @@ title: SIL Font Development Guide
 
 Welcome to the SIL font development guide.
 
-This website has been set up as a step-by-step guide to building, modifying and contributing to the various [open font projects](http://software.sil.org/fonts) designed and developed by [SIL International](https://www.sil.org). Let us know if you have any comments or suggestions to add to this guide. Enjoy!
+This website has been set up as a step-by-step guide to building, modifying and contributing to the various [open font projects](https://software.sil.org/fonts) designed and developed by [SIL International](https://www.sil.org). Let us know if you have any comments or suggestions to add to this guide. Enjoy!
 
 
 <ol class="rectangle-list">
