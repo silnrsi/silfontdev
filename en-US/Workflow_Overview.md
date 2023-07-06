@@ -11,10 +11,11 @@ This is a general overview of the workflow.
 
 ## Initial setup (one-time)
 
-- Install and configure the Docker+anvil toolchain
+- Install and configure Docker and anvil 
 - Set up a font projects folder and clone projects of interest
 
 These steps are covered in [Setting Up Tools]. 
+
 ## Daily routines
 
 - Start up Docker and the container (`anvil up`)
@@ -34,9 +35,10 @@ These steps are covered in [Setting Up Tools].
 - Review the results (in `/results`)
 - Commit your changes locally then push them to the main project
     - You may need to issue a pull request if it's not your project
-- Exit the container and shut it down (`anvil down`)
+- Exit the container and shut it down (`exit` and `anvil down`)
 
 See [Modifying Font Sources] and [Building Font Projects] for details.
+
 ## Preparing a font release
 
 - Modify the project metadata to reflect the release, including font version number
