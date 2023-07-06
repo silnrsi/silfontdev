@@ -43,9 +43,10 @@ See [Modifying Font Sources] and [Building Font Projects] for details.
     - In the UFOs (fontinfo.plist)
     - In the FONTLOG.txt
 - Adjust any other documentation
-- Tag the last commit to reflect the release number
+- Tag the last commit to reflect the release version
 - Build the fonts using `smith zip`, `smith tarball`, or `smith release`
 - Make a release on Github, uploading the release package from `results/releases/`
+
 ## Contributing back to the project
 
 - Contact the project maintainer to indicate your interest in contributing back to the project
