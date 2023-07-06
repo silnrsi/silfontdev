@@ -54,7 +54,7 @@ Windows users need to go through the extra steps described in [Configuring WSL].
 
 ## Step C: Setting up a font projects folder
 
-We recommend that you set up a dedicated font projects folder: *~/repos/wstechfonts/*. And that however many projects you work on they are checked out as subfolders in that main folder. This makes it easy to use a single container configuration for multiple projects. You do not need to run a container for each project at the same time. __Further steps and examples in this guide will assume that you have set up this folder.__
+We recommend that you set up a dedicated font projects folder - *~/repos/wstechfonts/* - and that each font project has its own folder within the dedicated folder, such as *~/repos/wstechfonts/font-project-name*. This makes it easy to use a single container configuration for multiple projects. You do not need to run a separate container for each project. __Further steps and examples in this guide will assume that you have set up this folder.__
 
 To create the default font projects folder, type:
 
@@ -63,11 +63,11 @@ To create the default font projects folder, type:
 
 ## Step D: Installing anvil 
 
-The easiest way to interact with this Docker container is via a separate utility called [anvil](https://github.com/silnrsi/anvil). _It's named after the solid tool the smiths use to repeatedly hammer on when working in their forge_. Anvil is a frontend to Docker compose and reads a configuration file available from its own github project repository. This makes it simpler to run the container with dedicated targets. It saves you from having to remember all the many underlying details of Docker and Docker compose. It basically acts as a simple Vagrant replacement. 
+The easiest way to interact with this Docker container is via a separate utility called [anvil](https://github.com/silnrsi/anvil). _It's named after the solid tool the smiths use to repeatedly hammer on when working in their forge_. Anvil is a frontend to Docker compose and reads a configuration file available from its own github project repository. This makes it simpler to run the container with dedicated targets. It saves you from having to remember all the many underlying details of Docker and Docker compose. If you are familiar with our older VirtualBox-based workflow, this replaces the Vagrant utility. 
 
 ### Checking out the anvil repository 
 
-Open your Terminal app (Windows users need to type `wsl` as an added step to get into the VM) and type:
+Open your Terminal app (Windows users need to first type `wsl` as an added step to get into the VM) and type:
 
 `cd ~/repos` 
 
@@ -113,7 +113,7 @@ To remove/destroy a container, but without touching any of the work files shared
 
 ### Using the container
 
-After the container is configured and working, the day-to-day usage goes like that:
+After the container is configured and working, the day-to-day usage goes like this:
 
 To get into the container and access the toolchain inside simply type:
 
@@ -150,5 +150,5 @@ If you want a persistent container to make local changes to the toolchain (like 
 
 [Docker]: https://www.docker.com 
 [smith]: https://github.com/silnrsi/smith 
-[Configuring WSL]: Configuring-WSL.html
+[Configuring WSL]: Configuring_WSL.html
 [Building Font Projects]: Building_Font_Projects.html

@@ -79,9 +79,9 @@ There are some general principles to keep in mind when using font editors with o
 
 ### Glyphs
 
-We currently use the [Glyphs] font editor (version 3x) to take care of the design side of font creation. It is a closed-source, macOS-only tool, but it's well-maintained, has many open plugins and extension scripts and provides decent support for open formats. Thankfully, there is also a libre/open source python library called [glyphsLib](https://github.com/googlei18n/glyphsLib) which provides cross-platform read and write support for the native [source format of Glyphs](https://github.com/schriftgestalt/GlyphsSDK/tree/Glyphs3/GlyphsFileFormat) the *.glyphs* file.
+We currently use the [Glyphs] font editor (version 3.x) to take care of the design side of font creation. It is a closed-source, macOS-only tool, but it's well-maintained, has many open plugins and extension scripts, and provides decent support for open formats. Thankfully, there is also a libre/open source python library called [glyphsLib](https://github.com/googlei18n/glyphsLib) which provides cross-platform read and write support for the native [source format of Glyphs](https://github.com/schriftgestalt/GlyphsSDK/tree/Glyphs3/GlyphsFileFormat) the *.glyphs* file.
 
-To load the current font sources into Glyphs, we do not open the UFOs directly. Instead, we use the following process using project-specific scripts (run from within the container, or alternatively you can install the necessary libraries in your macOS computer via a simple shell script [update-prefligh-libs-pyenv.sh](https://github.com/silnrsi/pysilfont/blob/master/preflight/update-preflight-libs-pyenv.sh)):
+To load the current font sources into Glyphs, we do not open the UFOs directly. Instead, we use the following process using project-specific scripts (run from within the container, or alternatively you can install the necessary libraries in your macOS computer via a simple shell script [update-preflight-libs-pyenv.sh](https://github.com/silnrsi/pysilfont/blob/master/preflight/update-preflight-libs-pyenv.sh)):
 
 - Type `./preglyphs` from the individual project folder using the terminal. This synthesizes a temporary *.glyphs* file from the existing UFO sources and corresponding designspaces.
 - Open the *.glyphs* file in Glyphs, make your changes, and save.
@@ -89,6 +89,8 @@ To load the current font sources into Glyphs, we do not open the UFOs directly. 
 - Review the changes in your git client and commit (then push) the changes you wish to keep.
 
 This is the best tested and recommended method for modifying fonts with a dedicated font editor. *Most of our projects include these scripts.*
+
+Technical detail: Due to limitations of the glyphsLib library the Glyphs file that this roundtrip process uses follows the Glyphs2, not Glyphs3, format. Version 3.x of the Glyphs app fully supports the Glyphs2 format, however some newer Glyphs-specific features are not supported.  
 
 ### Robofont
 
