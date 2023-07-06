@@ -1,8 +1,8 @@
-# SIL Font Development Notes
+# SIL Font Development Guide
 How to build, modify, and contribute to SIL International font projects. It is applicable to the following projects:
 
 - [Andika Mtihani](https://github.com/silnrsi/font-andika-mtihani)
-- (add more)
+- other projects on [software.sil.org/fonts](https://software.sil.org/fonts)
 
 This site is specifically for SIL font projects, however the content is equally applicable to any other projects that use the open font workflow described here. 
 
@@ -10,7 +10,6 @@ This site is specifically for SIL font projects, however the content is equally 
 - The anticipated content of the book can be found in the https://github.com/silnrsi/silfontdev/blob/master/en-US-weightlist.md document.
 - Each page is written in GitHub Flavored Markdown (GFM) and begins with Jekyll front matter which specifies the title, category, weight (page sort order), outline level (similar to the weight, but showing the hierarchy), published status, and layout (page template - bookpage is currently used by all pages).
 - The GFM pages are in the en-US folder.
-- Some of the current pages are placeholders which need to be filled out and/or replaced by several pages.
 - If you find errors or problems please create Github issues for them. That's the best way to get our attention.
 
 
