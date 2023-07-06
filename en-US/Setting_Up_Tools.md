@@ -17,9 +17,9 @@ A. Installing Docker
 
 B. Installing WSL for Windows users 
 
-C. Installing anvil 
+C. Setting up a font projects folder
 
-D. Setting up a font projects folder
+D. Installing anvil 
 
 E. Configuring anvil 
 
@@ -121,8 +121,10 @@ To get into the container and access the toolchain inside simply type:
 
 The command prompt should change to show you the minimal information needed: a whale as the Docker symbol, the current absolute path and a timestamp.
 
-```🐳  /smith  
-(Mon June 26 08:01:38) ❯```
+```
+🐳  /smith  
+(Mon June 26 08:01:38) ❯
+```
 
 - Make any changes you want - see next section on [Building Font Projects](Building_Font_Projects.html)
 - When done, type: `exit`
