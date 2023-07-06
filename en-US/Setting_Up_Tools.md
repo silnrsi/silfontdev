@@ -54,7 +54,9 @@ Windows users need to go through the extra steps described in [Configuring WSL].
 
 ## Step C: Setting up a font projects folder
 
-We recommend that you set up a dedicated font projects folder: *~/repos/wstechfonts/*. And that however many projects you work on they are checked out as subfolders in that main folder. This makes it easy to use a single container configuration for multiple projects. You do not need to run a container for each project at the same time. __Further steps and examples in this guide will assume that you have set up this folder.__  Type:
+We recommend that you set up a dedicated font projects folder: *~/repos/wstechfonts/*. And that however many projects you work on they are checked out as subfolders in that main folder. This makes it easy to use a single container configuration for multiple projects. You do not need to run a container for each project at the same time. __Further steps and examples in this guide will assume that you have set up this folder.__
+
+To create the default font projects folder, type:
 
 `mkdir -p ~/repos/wstechfonts`
 

@@ -16,7 +16,7 @@ Because of current performance issues with native Docker on Windows filesystem, 
 
 ## Adjusting the resources allocated to WSL in Windows
 
-By default Windows automatically allocates resources to the WSL VM, but you can adjust these settings by dropping this [.wslconfig configuration file](https://github.com/silnrsi/anvil/blob/main/.wslconfig) into *%USERPROFILE%\.wslconfig* (or *C:\Users\username\.wslconfig* where *username* is your Windows username).
+By default Windows automatically allocates resources to the WSL VM, but you can adjust these settings by dropping this [.wslconfig configuration file](https://github.com/silnrsi/anvil/blob/main/.wslconfig) into *%USERPROFILE%* (or *C:\Users\username\.wslconfig* where *username* is your Windows username).
 You can adjust the defaults settings to the specific resources available on your computer. 
 
 ## Setting up a fonts project folder
@@ -27,7 +27,7 @@ To get into the WSL VM, launch your Terminal app (cmd) and type:
 
 `wsl` 
 
-Then inside the VM type:
+Then inside the VM, type:
 
 `mkdir -p ~/repos/wstechfonts`
 
@@ -44,14 +44,14 @@ The contents of the WSL VM are visible in the Explorer tree structure but we are
 
 Because the git index is handled differently between Windows and Ubuntu you need to only use the GUI version of git and not the command-line version inside your VM or your container. (Many Windows users like [Sourcetree] as a friendly no-cost git GUI for Windows). 
 
-We need to adjust Sourcetree's configuration so that git does not get confused by the shared filesystem in WSL and also ignores the executable flags set for certain scripts (as the Windows filesystem cannot currently represent that). It’s important to do this before checking out any repositories! If Sourcetree is constantly asking for your credentials, you should make sure you have the [Git Credentials Manager] installed and that in in Tools -> Options, in the Git tab, the option "Allow Sourcetree to manage my credentials via the Git Credentials Manager" is ticked. 
+We need to adjust Sourcetree's configuration so that git does not get confused by the shared filesystem in WSL and also ignores the executable flags set for certain scripts (as the Windows filesystem cannot currently represent that). It’s important to do this before checking out any repositories! If Sourcetree is constantly asking for your credentials, you should make sure you have the [Git Credentials Manager] installed and that in *Tools -> Options*, in the Git tab, the option "Allow Sourcetree to manage my credentials via the Git Credentials Manager" is ticked. 
 
-In Sourcetree, make sure the following settings are set in Tools -> Options, in the Git tab
+In Sourcetree, make sure the following settings are set in *Tools -> Options*, in the Git tab
 tick "Use git bash as default terminal".
 
 Under Git Version check that "Embedded" is chosen (the button should look light gray and pressed down).
 
-We need to further adjust certain git configuration items because the git font projects sources are stored inside the VM filesystem. Open a Terminal window from inside Sourcetree by going to Action -> Open in Terminal then type:
+We need to further adjust certain git configuration items because the git font projects sources are stored inside the VM filesystem. Open a Terminal window from inside Sourcetree by going to *Action -> Open in Terminal* then type:
 
 `git config --global --add safe.directory "*"`
 
@@ -63,12 +63,19 @@ Double-check the current configuration by typing:
 
 `git config --list --show-origin`
 
-The __~/.gitconfig__ file inside your Windows user profile directory (accessible directly via %%USERPROFILE%% and not the Ubuntu VM inside WSL should have the following lines. Type this to open that file and verify its contents:
-```wsl
-cd ~
-editor /mnt/c/Users/username/.gitconfig```
+The *~/.gitconfig* file inside your Windows user profile directory (accessible directly via *%USERPROFILE%* and not the Ubuntu VM inside WSL should have the following lines. Type this to open that file and verify its contents:
 
-(__username__ is your Windows username and __editor__ is your preferred editor, like VScode for example)
+`wsl`
+
+`cd ~`
+
+`editor /mnt/c/Users/username/.gitconfig`
+
+or
+
+`editor C:\Users\username\.gitconfig`
+
+(*username* is your Windows username and *editor* is your preferred editor, like VScode for example)
 
 It should contain the following lines:
 
@@ -85,9 +92,13 @@ Then close that terminal/command prompt window.
 
 If you have existing project repositories on your local machine, it is important to reclone your projects with Sourcetree rather than manually copying them over. 
 
-Clone the project with Sourcetree and set the Destination path to W: ```\home\username\repos\wstechfonts\font-andika-mtihani```  (change *username* to correspond to the username chosen when WSL first set up Ubuntu)
+Clone the project with Sourcetree and set the Destination path to W:
 
-IMPORTANT: because of Sourcetree limitations related to Windows and the WSL filesystem, you need to run the *fix-git-execute-bits-scripts* after you cloning a repository to restore the executable bit on certain files, so you can run the various preflight(g), preglyphs scripts (and other scripts you may have in tools/) by doing ./myscript  (the *fix-git-execute-bits-script* is already part of the Docker image). For example type: 
+```\home\username\repos\wstechfonts\font-andika-mtihani```
+
+(change *username* to correspond to the username chosen when WSL first set up Ubuntu)
+
+IMPORTANT: because of Sourcetree limitations related to Windows and the WSL filesystem, you need to run the *fix-git-execute-bits-scripts* after you cloning a repository to restore the executable bit on certain files, so you can run the various preflight(g), preglyphs scripts (and other scripts you may have in tools/) by doing ./myscript  (the *fix-git-execute-bits-script* is already part of the Docker image). For example, type: 
 
 `anvil up`
 

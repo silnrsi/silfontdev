@@ -24,7 +24,7 @@ Here is a walkthrough of how to download one of SIL's font projects and build it
 
 MacOS and Ubuntu users can navigate to the font projects folder (*~/repos/wstechfonts* by default) and check out a new font project repository, for example [Andika Mtihani]:
 
-To get into the project font folder type:
+To get into the project font folder, type:
 
 `cd ~/repos/wstechfonts`
 
