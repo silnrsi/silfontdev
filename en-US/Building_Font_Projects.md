@@ -96,6 +96,11 @@ To produce release versions, without the git hash and *-dev* suffix indicating a
 
 `smith release`
 
+## Visualizing the steps via a quick video walkthrough
+
+<video src="../assets/videos/steps.webm" type="video/webm" width="85%" height="85%" controls preload>Your browser does not support the video tag, please install a more recent version of, for example, https://www.mozilla.org/en-US/firefox/</video>
+
+
 ## Debugging smith targets
 
 If a smith step generates an error, and the existing logs don't help, you can increase the verbosity of that particular build step by typing, for example: (the more v added the more verbosity)
@@ -103,6 +108,8 @@ If a smith step generates an error, and the existing logs don't help, you can in
 `smith build -vv` 
 
 `smith pdf -vvv` 
+
+If the whole system becomes unresponsive, you may also need to restart Docker. Use *Restart* from the system tray menu, and failing that, *Quit Docker Desktop*, then start it again from your apps menu. 
 
 
 [Setting Up Tools]: Setting_Up_Tools.html
