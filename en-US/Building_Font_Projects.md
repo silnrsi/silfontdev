@@ -98,7 +98,7 @@ To produce release versions, without the git hash and *-dev* suffix indicating a
 
 ## Visualizing the steps via a quick video walkthrough
 
-<video src="../assets/videos/steps.webm" type="video/webm" width="85%" height="85%" controls preload>Your browser does not support the video tag, please install a more recent version of, for example, https://www.mozilla.org/en-US/firefox/</video>
+<video src="../assets/videos/steps.webm" type="video/webm" width="85%" height="85%" controls preload muted>Sorry, your browser does not support the video tag, please install a more recent browser like Mozilla Firefox: https://www.mozilla.org/en-US/firefox/</video>
 
 
 ## Debugging smith targets
