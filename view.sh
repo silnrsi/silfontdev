@@ -1,1 +1,4 @@
-jekyll serve --watch --incremental -l -t
+#!/bin/sh 
+
+jekyll serve --watch --incremental -o -l -t
+
