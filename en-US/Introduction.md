@@ -15,7 +15,7 @@ In this guide we assume that:
 
 We approach font design and script engineering like a libre/open source software project, with publicly accessible font sources in open formats, build systems using only unrestricted libre/open tools and a consistent set of recommended best practices to enable smooth collaborative work with others.
 
-The font we will use as our practical example throughout this guide is [Andika Mtihani]. This font project is specifically designed to be an ongoing testbed for open workflow development. The [Andika Mtihani] family, along with all fonts designed and produced by SIL International, is released under the [SIL Open Font License] (see the current [OFL-FAQ] for extra details).
+The font we will use as our practical example throughout this guide is [Andika Mtihani]. This font project is specifically designed to be an ongoing testbed for open workflow development. The [Andika Mtihani] family, along with all fonts designed and produced by SIL, is released under the [SIL Open Font License] (see the current [OFL-FAQ] for extra details).
 
 All our active projects use the workflow described in this guide, and we encourage you to use it for your projects as well. You can simply mention this guide in your documentation, such as a link in a FONTLOG.txt, CONTRIBUTING.md or equivalent file in your project repository. 
 
@@ -27,10 +27,10 @@ __To jump right into configuring your computer see [Setting Up Tools].__
 
 
 
-*&mdash; [SIL International's WSTech team] (Writing Systems Technology)* - [AUTHORS] 
+*&mdash; [SIL's WSTech team] (Writing Systems Technology)* - [AUTHORS] 
 
 
-[SIL International font projects]: https://software.sil.org/fonts
+[SIL's open font projects]: https://software.sil.org/fonts
 [Andika Mtihani]: https://github.com/silnrsi/font-andika-mtihani
 [Setting Up Tools]: Setting_Up_Tools.html
 [Git]: https://git-scm.com/
@@ -39,5 +39,5 @@ __To jump right into configuring your computer see [Setting Up Tools].__
 [OFL-FAQ]: https://scripts.sil.org/OFL-FAQ_web
 [Source Formats]: Source_Formats.html
 [Workflow Overview]: Workflow_Overview.html
-[SIL International's WSTech team]: https://software.sil.org/wstech 
+[SIL's WSTech team]: https://software.sil.org/wstech 
 [AUTHORS]: ../AUTHORS.txt
