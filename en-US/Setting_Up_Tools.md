@@ -9,7 +9,7 @@ title: Setting Up Tools
 
 Our projects use a consistent set of libre/open tools for modifying, building and testing fonts. We call this software collection our toolchain. To rebuild our fonts yourself, the easiest will be to use the same toolchain and workflow we use. But since we use open formats, you should be able to use the various source files with other tools as well, although you will have to rely on your own experience and on documentation available outside of this guide for the practical details.
 
-To allow for easier installation, use and update of the various software tools which form part of the [smith] toolchain, we use a container (a container is a lightweight version of a virtual machine). This container is currently based on [Ubuntu](https://www.ubuntu.com/){:target="_blank"} 22.04 LTS (Jammy) and uses the [Docker] technology. This enables us to spin up a new, separate, Ubuntu-based environment in a container without any risk to the host computer. For the toolchain to be accessible and be allowed to run on the shared font folder files, Docker will need to run as a background service. 
+To allow for easier installation, use and update of the various software tools which form part of the [smith] toolchain, we use a container (a container is a lightweight version of a virtual machine). This container is currently based on [Ubuntu](https://www.ubuntu.com/){:target="_blank"} 24.04 LTS (Noble) and uses the [Docker] technology. This enables us to spin up a new, separate, Ubuntu-based environment in a container without any risk to the host computer. For the toolchain to be accessible and be allowed to run on the shared font folder files, Docker will need to run as a background service. 
 
 The process of setting up the smith toolchain on your own computer involves:
 
@@ -44,11 +44,11 @@ Unlike macOS and Ubuntu, Windows does not come with some of the basic command-li
 Launch the Windows command prompt (or type: `cmd`)
 
 Type the following to install WSL:
-`wsl --install -d Ubuntu-20.04`
+`wsl --install -d Ubuntu-24.04`
 
 After granting permissions and rebooting, your computer will prepare the WSL VM (Virtual Machine) and ask you to pick a username and password. Make a note of both, especially the password which you will need to use again. 
 
-In the Docker settings available from the system tray menu (look for the icon of a whale carrying containers on its back) or by clicking on the gears icon in the Docker dashboard, you will need to make sure that this newly created VM is selected as the one integrated by default. Under Resources -> WSL Integration, make sure that "Enable integration with my default WSL distro" is ticked and that the sliding button next to Ubuntu-20.04 is set to on (blue rather than gray). Now press the "Apply and Restart" button. 
+In the Docker settings available from the system tray menu (look for the icon of a whale carrying containers on its back) or by clicking on the gears icon in the Docker dashboard, you will need to make sure that this newly created VM is selected as the one integrated by default. Under Resources -> WSL Integration, make sure that "Enable integration with my default WSL distro" is ticked and that the sliding button next to Ubuntu-24.04 is set to on (blue rather than gray). Now press the "Apply and Restart" button. 
 
 Windows users need to go through the extra steps described in [Configuring WSL].
 

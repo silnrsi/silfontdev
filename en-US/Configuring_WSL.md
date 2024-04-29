@@ -37,9 +37,9 @@ Don't check out any repositories into the new folder yet. There are some further
 
 The contents of the WSL VM are visible in the Explorer tree structure but we are going to map it to a Windows network drive. This is needed because most Windows apps don't know how to browse to the special folders inside the WSL VM, but when they are mapped to a drive, they can find them and use them.
 
-- In the Navigation Pane of Windows File Explorer, scroll down to the Linux section and right-click on the Ubuntu-20.04 entry
+- In the Navigation Pane of Windows File Explorer, scroll down to the Linux section and right-click on the Ubuntu-24.04 entry
 - Select "Map Network Drive" then select W:  (W for WSTech or WSL) check that it’s set to “Reconnect at sign-in” and then press Finish
-- Select that drive (Ubuntu-20.04 or W:) in the Navigation Pane, right-click and choose "Pin to Quick Access". Alternatively you can type: `\\wsl$`  (or `\\wsl.localhost` ) in the address bar to access it directly.
+- Select that drive (Ubuntu-24.04 or W:) in the Navigation Pane, right-click and choose "Pin to Quick Access". Alternatively you can type: `\\wsl$`  (or `\\wsl.localhost` ) in the address bar to access it directly.
 
 
 ### Setting Sourcetree options and git configuration

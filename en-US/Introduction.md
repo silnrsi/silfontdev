@@ -9,7 +9,7 @@ title: Introduction
 
 In this guide we assume that:
 
-- you have access to a computer running recent versions of macOS, Windows or Ubuntu where you already have (or can install) the following software: Docker, Bash/Zsh and Git. We will be using a container based on Ubuntu 22.04 LTS (Jammy) - see [Setting Up Tools].
+- you have access to a computer running recent versions of macOS, Windows or Ubuntu where you already have (or can install) the following software: Docker, Bash/Zsh and Git. We will be using a container based on Ubuntu 24.04 LTS (Noble) - see [Setting Up Tools].
 - you are familiar with the basics of using the terminal (or command-line). There is no graphical interface available for using the various tools. *Don't worry, simple cut and paste instructions will be available.*
 - you have basic knowledge of distributed version control systems, [Git] and [GitHub] in particular. *If all you want to do is build fonts locally, we'll provide the minimal info you need.*
 
