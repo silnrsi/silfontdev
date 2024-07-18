@@ -66,7 +66,7 @@ To run the whole test suite, type
 
 To run the FontBakery checks (via the pysilfont profile), type:
 
-`smith ttfchecks`
+`smith fbchecks`
 
 There are times, especially if you've changed the project *wscript*, when you need to wipe the results clean of any temporary artifacts, cache or config files. If at any time you want to start with a fresh build, type:
 
