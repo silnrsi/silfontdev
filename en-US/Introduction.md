@@ -35,8 +35,8 @@ __To jump right into configuring your computer see [Setting Up Tools].__
 [Setting Up Tools]: Setting_Up_Tools.html
 [Git]: https://git-scm.com/
 [GitHub]: https://help.github.com/
-[SIL Open Font License]: https://scripts.sil.org/OFL
-[OFL-FAQ]: https://scripts.sil.org/OFL-FAQ_web
+[SIL Open Font License]: https://openfontlicense.org
+[OFL-FAQ]: https://openfontlicense.org/ofl-faq
 [Source Formats]: Source_Formats.html
 [Workflow Overview]: Workflow_Overview.html
 [SIL's WSTech team]: https://software.sil.org/wstech 

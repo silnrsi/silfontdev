@@ -134,8 +134,8 @@ Other font editors will be reviewed and their workflow steps described here in t
 
 
 
-[SIL Open Font License]: https://scripts.sil.org/OFL
-[Reserved Font Names (RFNs)]: https://scripts.sil.org/OFL-FAQ_web#9d7a93f7
+[SIL Open Font License]: https://openfontlicense.org
+[Reserved Font Names (RFNs)]: https://openfontlicense.org/ofl-reserved-font-names/
 [pysilfont]: https://github.com/silnrsi/pysilfont/blob/master/docs/scripts.md
 [psfnormalize]: https://github.com/silnrsi/pysilfont/blob/master/docs/scripts.md#psfnormalize
 [RoboFont]: https://robofont.com/

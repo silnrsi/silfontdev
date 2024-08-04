@@ -28,5 +28,5 @@ Let us know if you have any comments or suggestions to add to this guide.
 Thanks!
 
 
-[OFL (SIL Open Font License)]: https://scripts.sil.org/OFL
-[OFL-FAQ]: https://scripts.sil.org/OFL-FAQ_web
+[OFL (SIL Open Font License)]: https://openfontlicense.org
+[OFL-FAQ]: https://openfontlicense.org/ofl-faq
