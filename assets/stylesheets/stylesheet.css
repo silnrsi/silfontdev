@@ -122,6 +122,19 @@ header h2 {
   text-transform: capitalize;
 }
 
+.notice {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #ffcf7d;
+  border-bottom: solid 1px #cfa255;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: #333333;
+}
+
 .inner {
   position: relative;
   width: 940px;
@@ -676,7 +689,6 @@ ol.rectangle-list li {
 .rectangle-list {
   counter-reset: li;
   list-style: none;
-  *list-style: decimal;
   padding: 0;
   margin-bottom: .4em;
 }
@@ -690,7 +702,6 @@ ol.rectangle-list a {
   position: relative;
   display: block;
   padding: .4em .4em .4em .8em;
-  *padding: .4em;
   margin: .5em 0 .5em 2.5em;
   background: #d6dce0;
   color: #222;

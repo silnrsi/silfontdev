@@ -1,4 +1,8 @@
 # SIL Font Development Guide
+
+> [!NOTE]
+> This website is no longer being updated. Revised and improved information can be found in the Fonts topic at [Writing Systems Technical Resources][wstr].
+
 How to build, modify, and contribute to SIL International font projects. It is applicable to the following projects:
 
 - [Andika Mtihani](https://github.com/silnrsi/font-andika-mtihani)
@@ -20,3 +24,4 @@ We also gratefully acknowledge all the hard work that has gone into the various 
 
 [Design With FontForge]: http://designwithfontforge.com
 [GitHub]: https://github.com/fontforge/designwithfontforge.com
+[wstr]: https://writingsystems.info/topics/fonts/building-and-modifying-sil-fonts/
